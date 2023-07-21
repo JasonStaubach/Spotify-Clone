@@ -24,11 +24,11 @@ export default function LoginFormPage(){
     return(
         <form onSubmit={handleSubmit}>
             <label id="login-username"> Username/Email
-                <input type="text" value={credential} onChange={(e)=setCredential(e.target.value)}/>
+                <input type="text" value={credential} onChange={(e) => setCredential(e.target.value)}/>
             </label>
 
             <label id="login-password"> Password
-                <input type="password" value={password} onChange={(e)=setPassword(e.target.value)}/>
+                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
             </label>
 
             <button type="submit">Log In</button>
