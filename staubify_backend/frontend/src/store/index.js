@@ -3,12 +3,14 @@ import thunk from 'redux-thunk';
 // import artistsReducer from './artists'
 // import songsReducer from './songs';
 import usersReducer from './users';
+import sessionReducer from './session';
 
 
 export const rootReducer = combineReducers({
     // artists: artistsReducer,
+    session: sessionReducer,
     // songs: songsReducer,
-    users: usersReducer,
+    users: usersReducer
 
 });
 
