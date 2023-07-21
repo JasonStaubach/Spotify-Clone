@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, Route, Switch } from 'react-router-dom'
 import LoginFormPage from './components/LoginFormPage';
+import HeaderBar from './components/HeaderBar';
 
 function App() {
   return (
@@ -10,8 +11,9 @@ function App() {
           <LoginFormPage />
         </Route>
         <Route path="/">
-          <h1>Temp Splash Page</h1>
-          <Link to="/login">Login</Link>
+          <HeaderBar/>
+          {/* <h1>Temp Splash Page</h1>
+          <Link to="/login">Login</Link> */}
         </Route>
       </Switch>
     </>

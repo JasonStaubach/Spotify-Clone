@@ -1,26 +1,31 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import * as sessionFunctions from '../../store/session'
 import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory } from "react-router-dom"
 
 
 
 export default function LoginFormPage(){
     const dispatch = useDispatch()
-    const sessionUser = useSelector(state => state.session.user)
+    const history = useHistory()
     
     const [username, setCredential] = useState('')
     const [password, setPassword] = useState('')
     
-    if (sessionUser) return <Redirect to="/" />
+    const sessionUser = useSelector(state => state.session.user)
+    if (sessionUser) <Redirect to="/" />
     
     function handleSubmit(e){
         e.preventDefault()
         // debugger
-        return dispatch(sessionFunctions.login({username, password}))
-
+        dispatch(sessionFunctions.login({username, password})).then(() => history.push("/"))
+        
+        // return redirect("/")
         //error handling later
     }
+
+   
     
     return(
         <form onSubmit={handleSubmit}>

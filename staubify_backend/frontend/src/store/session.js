@@ -31,7 +31,7 @@ function removeCurrentUser(){
 
 export function login ({username, password}){
     return async function(dispatch){
-        debugger
+        // debugger
         const res = await csrfFetch("api/session", {
             method: 'POST',
             body: JSON.stringify({username, password})
@@ -50,7 +50,8 @@ export function login ({username, password}){
 export function logout(){
     return async function (dispatch){
     const res = await csrfFetch("/api/session", {
-      method: "DELETE"
+      method: "DELETE",
+      headers: {"X-CSRF-Token": sessionStorage['X-CSRF-Token']}
     });
     storeCurrentUser(null);
     dispatch(removeCurrentUser());
