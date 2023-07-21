@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
 import * as sessionFunctions from '../../store/session'
 import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 
@@ -23,11 +24,11 @@ export default function LoginFormPage(){
     return(
         <form onSubmit={handleSubmit}>
             <label id="login-username"> Username/Email
-                <input type="text" value={credential} onChange={setCredential(e.target.value)}/>
+                <input type="text" value={credential} onChange={(e)=setCredential(e.target.value)}/>
             </label>
 
             <label id="login-password"> Password
-                <input type="password" value={password} onChange={setPassword(e.target.value)}/>
+                <input type="password" value={password} onChange={(e)=setPassword(e.target.value)}/>
             </label>
 
             <button type="submit">Log In</button>
