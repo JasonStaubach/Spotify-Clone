@@ -1,13 +1,13 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import songsReducer from './songs';
+// import artistsReducer from './artists'
+// import songsReducer from './songs';
 import usersReducer from './users';
-import artistsReducer from './artists'
 
 
 export const rootReducer = combineReducers({
-    artists: artistsReducer,
-    songs: songsReducer,
+    // artists: artistsReducer,
+    // songs: songsReducer,
     users: usersReducer,
 
 });
