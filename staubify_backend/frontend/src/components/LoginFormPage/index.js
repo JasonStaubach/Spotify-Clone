@@ -9,14 +9,15 @@ export default function LoginFormPage(){
     const dispatch = useDispatch()
     const sessionUser = useSelector(state => state.session.user)
     
-    const [credential, setCredential] = useState('')
+    const [username, setCredential] = useState('')
     const [password, setPassword] = useState('')
     
     if (sessionUser) return <Redirect to="/" />
     
     function handleSubmit(e){
         e.preventDefault()
-        return dispatch(sessionFunctions.login({credential, password}))
+        // debugger
+        return dispatch(sessionFunctions.login({username, password}))
 
         //error handling later
     }
@@ -24,7 +25,7 @@ export default function LoginFormPage(){
     return(
         <form onSubmit={handleSubmit}>
             <label id="login-username"> Username/Email
-                <input type="text" value={credential} onChange={(e) => setCredential(e.target.value)}/>
+                <input type="text" value={username} onChange={(e) => setCredential(e.target.value)}/>
             </label>
 
             <label id="login-password"> Password
