@@ -1,0 +1,14 @@
+.signup-form-holder{
+    width: 80%;
+    height: auto;
+    background-color: white;
+    color: black;
+}
+
+.form{
+    display: flex;
+    justify-content: right;
+}
+body{
+    color: white;
+}

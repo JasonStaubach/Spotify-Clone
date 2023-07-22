@@ -1,0 +1,71 @@
+.login-top-bar{
+    background-color: black;
+    width: 100%;
+    height: 90px;
+}
+
+.login-page-submit{
+    /* opacity: 50%;
+    display: hidden; */
+    font-family: "Spotify Circular";
+    text-decoration: none;
+    background-color: green;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 130px;
+    border: 0px;
+    border-radius: 36px;
+    margin-top: 40px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.login-form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.outer-login-page{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inner-login-page{
+    margin-top: 20px;
+    background-color: black;
+    border-radius: 8px;
+    width: 65%;
+    text-align: center;
+}
+.inner-login-page label{
+    text-align: left;
+}
+
+.inner-login-page input{
+    background-color: black;
+    width: 300px;
+    height: 45px;
+    border-radius: 5px;
+    border: solid grey 1px;
+    color: white;
+    font-size: medium;
+}
+
+.inner-login-page input:hover{
+    border-radius: 5px;
+    border: solid white 1px;
+}
+
+.greyText{
+    color: grey;
+}
+
+.greyText :first-child{
+    color: white;
+}
+.greyText :first-child:hover{
+    color: green;
+}
