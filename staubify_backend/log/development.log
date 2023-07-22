@@ -1822,3 +1822,39 @@ Processing by Api::SessionsController#destroy as JSON
 Completed 204 No Content in 27ms (ActiveRecord: 6.1ms | Allocations: 4923)
 
 
+Started GET "/mystyle.css" for 127.0.0.1 at 2023-07-22 09:47:24 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/mystyle.css"):
+  
+Started GET "/index.css" for 127.0.0.1 at 2023-07-22 09:47:34 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/index.css"):
+  
+Started GET "/src/index.css" for 127.0.0.1 at 2023-07-22 09:47:47 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.css"):
+  
+Started GET "/src/index.css" for 127.0.0.1 at 2023-07-22 09:47:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.css"):
+  
+Started GET "/src/index.css" for 127.0.0.1 at 2023-07-22 09:48:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.css"):
+  
+Started GET "/src/index.css" for 127.0.0.1 at 2023-07-22 09:51:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.css"):
+  
+Started GET "/src/index.css" for 127.0.0.1 at 2023-07-22 09:54:30 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.css"):
+  
+Started GET "/src/index.css" for 127.0.0.1 at 2023-07-22 09:55:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.css"):
+  
+Started GET "/src/index.css" for 127.0.0.1 at 2023-07-22 09:55:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.css"):
+  

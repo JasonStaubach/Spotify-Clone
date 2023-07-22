@@ -16,9 +16,9 @@ export default function HeaderBar(){
 
     return(
         <div id="header-bar">  
-          {sessionStorage.currentUser ? null : <button className="log"><Link to="/login">Login</Link></button>}
-          {sessionStorage.currentUser ? null : <button className="log"><Link to="/signup">Sign Up</Link></button>}
-          {sessionStorage.currentUser ? <button className="log" onClick={handleLogout}>Logout</button> : null}
+          {sessionStorage.currentUser ? null : <button className="log login-head-button"><Link to="/login">Login</Link></button>}
+          {sessionStorage.currentUser ? null : <button className="log signup-head-button"><Link to="/signup">Sign Up</Link></button>}
+          {sessionStorage.currentUser ? <button className="log logout-head-button" onClick={handleLogout}>Logout</button> : null}
         </div>
     )
 }

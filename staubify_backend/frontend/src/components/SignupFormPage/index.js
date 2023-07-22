@@ -10,6 +10,21 @@ export default function LoginFormPage(){
     const dispatch = useDispatch()
     const history = useHistory()
 
+    const MONTHS = [
+        `January`,
+        `February`,
+        `March`,
+        `April`,
+        `May`,
+        `June`,
+        `July`,
+        `August`,
+        `September`,
+        `October`,
+        `November`,
+        `December`
+    ]
+
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [email, setEmail] = useState('')
@@ -30,32 +45,31 @@ export default function LoginFormPage(){
         //error handling later
         return(
             <form onSubmit={handleSubmit}>
-                <label id="signup-username"> Username
-                    <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
+                <label id="signup-email"> What's your email address?
+                    <input 
+                        type="text" value={email} placeholder= 'Enter your email.' 
+                        onChange={(e) => setEmail(e.target.value)}>
+                    </input>
                 </label>
-    
-                <label id="signup-password"> Password
-                    <input type="text" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                <label id="signup-username"> What should we call you?
+                    <input 
+                        type="text" value={username} placeholder= 'Enter a profile name.'
+                        onChange={(e) => setUsername(e.target.value)}>
+                    </input>
+                </label>
+                <label id="signup-password"> Create a password.
+                    <input 
+                        type="text" value={password} placeholder="Create a password."
+                        onChange={(e) => setPassword(e.target.value)}>
+                    </input>
                 </label>
 
-                <label id="signup-email"> Email
-                    <input type="text" value={email} onChange={(e) => setEmail(e.target.value)}/>
-                </label>
-
-                <select onChange={(e) => setDay(e.target.value)}>Day
-                    <option value="">Select a day</option>
-                    {Array(31).fill().map((_,i) => (
-                        <option key = {i} value={i+1}>
-                            {i+1}
-                        </option>
-                    ))}
-                </select>
 
                 <select onChange={(e) => setDay(e.target.value)}>Month
                     <option value="">Select a Month</option>
-                    {Array(12).fill().map((_,i) => (
-                        <option key = {i} value={i+1}>
-                            {i+1}
+                    {MONTHS.map((month,i) => (
+                        <option key = {month} value={i}>
+                            {month}
                         </option>
                     ))}
                 </select>

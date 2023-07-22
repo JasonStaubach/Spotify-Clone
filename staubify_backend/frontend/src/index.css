@@ -1,8 +1,19 @@
 /* TODO Add site wide styles */
-/* @import 'src\components\HeaderBar\HeaderBar.scss'; */
+@import 'normalize.css';
+@import 'components/HeaderBar/HeaderBar.css';
+
+@font-face {
+    font-family: "Spotify Circular";
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.gstatic.com/s/spotifycircular/v2/SptCir-Regular.eot");
+    src: local("SptCir-Regular"),
+      url("https://fonts.gstatic.com/s/spotifycircular/v2/SptCir-Regular.woff2") format("woff2"),
+      url("https://fonts.gstatic.com/s/spotifycircular/v2/SptCir-Regular.woff") format("woff");
+  }
 
 body{
-    background-color: #181818;
+    background-color: rgb(37, 36, 36);
     color: white;
     width: 100%;
     height: 500px;
@@ -10,15 +21,11 @@ body{
 }
 
 button{
-    background-color: green
+    background-color: green;
+    font-family: "Spotify Circular";
+    text-decoration: none;
 }
 
-#header-bar{
-    border-style: solid;
-    border-color: red 5px;
-    width: 100%;
-    height: 30px;
-}
 
 #header-bar .log{
     float:right;
