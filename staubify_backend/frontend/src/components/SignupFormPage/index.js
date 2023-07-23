@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import * as sessionFunctions from '../../store/session'
-// import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
+import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 import { useHistory } from "react-router-dom"
 
 
@@ -32,6 +32,9 @@ export default function LoginFormPage(){
     const [month, setMonth] = useState('')
     const [year, setYear] = useState('')
 
+    //redirects to homepage if signin is called while logged in
+    if (sessionStorage.currentUser) history.push("/")
+
     useEffect(()=> {
         console.log(day)
     },[day])
@@ -42,7 +45,7 @@ export default function LoginFormPage(){
         const birthday = new Date()
         birthday.setFullYear(year, month, day)
         debugger
-        dispatch(sessionFunctions.signup({username, password, email, date: birthday})
+        dispatch(sessionFunctions.signup({username, password, email, birthday})
             ).then(() => history.push("/"))
     }
 

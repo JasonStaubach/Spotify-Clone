@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import * as sessionFunctions from '../../store/session'
-import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 import { useHistory } from "react-router-dom"
 import { Link } from "react-router-dom"
 
@@ -14,8 +13,7 @@ export default function LoginFormPage(){
     const [username, setCredential] = useState('')
     const [password, setPassword] = useState('')
     
-    const sessionUser = useSelector(state => state.session.user)
-    if (sessionUser) <Redirect to="/" />
+    if (sessionStorage.currentUser) history.push("/")
     
     function handleSubmit(e){
         e.preventDefault()
