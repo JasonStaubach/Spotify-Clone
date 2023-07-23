@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import * as sessionFunctions from '../../store/session'
-import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
+// import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 import { useHistory } from "react-router-dom"
 
 
@@ -39,7 +39,11 @@ export default function LoginFormPage(){
     function handleSubmit(e){
         e.preventDefault()
         // debugger
-        // dispatch(sessionFunctions.signup({username, password, email, date: Date.new(year,month,day)})).then(() => history.push("/"))
+        const birthday = new Date()
+        birthday.setFullYear(year, month, day)
+        debugger
+        dispatch(sessionFunctions.signup({username, password, email, date: birthday})
+            ).then(() => history.push("/"))
     }
 
         //error handling later
@@ -74,7 +78,6 @@ export default function LoginFormPage(){
                 <br/>
 
                 <select onChange={(e) => setMonth(e.target.value)}>Month
-                    <br/>
                     <option value="">Select a Month</option>
                     {MONTHS.map((month,i) => (
                         <option key = {month} value={i}>

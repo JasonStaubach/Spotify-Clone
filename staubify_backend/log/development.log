@@ -2286,3 +2286,144 @@ Processing by Api::SessionsController#destroy as JSON
 Completed 204 No Content in 72ms (ActiveRecord: 49.9ms | Allocations: 4903)
 
 
+Started GET "/src/index.css" for 127.0.0.1 at 2023-07-23 11:45:16 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.css"):
+  
+Started GET "/api/session" for 127.0.0.1 at 2023-07-23 11:45:17 -0400
+Processing by Api::SessionsController#show as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+Completed 200 OK in 23ms (Views: 0.9ms | ActiveRecord: 6.6ms | Allocations: 4825)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-07-23 11:45:18 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/src/index.css" for 127.0.0.1 at 2023-07-23 11:46:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.css"):
+  
+Started POST "/api/users" for 127.0.0.1 at 2023-07-23 11:49:07 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"BananaMan", "email"=>"jooles@singup.edu", "password"=>"[FILTERED]", "user"=>{"username"=>"BananaMan", "email"=>"jooles@singup.edu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "BananaMan"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jooles@singup.edu"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mUser Create (44.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "email", "created_at", "updated_at", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "BananaMan"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"], ["email", "jooles@singup.edu"], ["created_at", "2023-07-23 15:49:08.125903"], ["updated_at", "2023-07-23 15:49:08.125903"], ["birthday", nil]]
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 492ms (ActiveRecord: 52.8ms | Allocations: 14944)
+
+
+
+ActiveRecord::NotNullViolation - PG::NotNullViolation: ERROR:  null value in column "birthday" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (10, BananaMan, $2a$12$XFZuXMP3H7Rxj5U/pdoEK.QX6s26hX1uW7RY8HJW3ac/k57fghZme, elqmz2fHrVAfsJhJVZEAxA, jooles@singup.edu, 2023-07-23 15:49:08.125903, 2023-07-23 15:49:08.125903, null).:
+  app/controllers/api/users_controller.rb:9:in `create'
+
+Started POST "/api/users" for 127.0.0.1 at 2023-07-23 11:57:23 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"BananaMan", "email"=>"jooles@singup.edu", "password"=>"[FILTERED]", "user"=>{"username"=>"BananaMan", "email"=>"jooles@singup.edu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "BananaMan"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jooles@singup.edu"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mUser Create (2.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "email", "created_at", "updated_at", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "BananaMan"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"], ["email", "jooles@singup.edu"], ["created_at", "2023-07-23 15:57:23.702266"], ["updated_at", "2023-07-23 15:57:23.702266"], ["birthday", nil]]
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 457ms (ActiveRecord: 16.8ms | Allocations: 9608)
+
+
+
+ActiveRecord::NotNullViolation - PG::NotNullViolation: ERROR:  null value in column "birthday" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (11, BananaMan, $2a$12$6kltXJV2mDkNbL0fRPXhUu3zaYBy.QgyRsgxE713OiJok6QN.XhZO, rkBXSJDiy_0VmYKfkO6sNQ, jooles@singup.edu, 2023-07-23 15:57:23.702266, 2023-07-23 15:57:23.702266, null).:
+  app/controllers/api/users_controller.rb:9:in `create'
+
+Started POST "/api/users" for 127.0.0.1 at 2023-07-23 11:58:55 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"BananaMan", "email"=>"jooles@singup.edu", "password"=>"[FILTERED]", "user"=>{"username"=>"BananaMan", "email"=>"jooles@singup.edu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "BananaMan"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jooles@singup.edu"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mUser Create (3.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "email", "created_at", "updated_at", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "BananaMan"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"], ["email", "jooles@singup.edu"], ["created_at", "2023-07-23 15:58:56.425548"], ["updated_at", "2023-07-23 15:58:56.425548"], ["birthday", nil]]
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 472ms (ActiveRecord: 7.0ms | Allocations: 6494)
+
+
+
+ActiveRecord::NotNullViolation - PG::NotNullViolation: ERROR:  null value in column "birthday" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (12, BananaMan, $2a$12$U.pnDcKGv9XwZlaohjZ/OuEwCdEzlrENtBCrKNxa3QDDYZFnliqla, Ti4i2YAZVhbWnogsqoC0Jg, jooles@singup.edu, 2023-07-23 15:58:56.425548, 2023-07-23 15:58:56.425548, null).:
+  app/controllers/api/users_controller.rb:9:in `create'
+
+Started GET "/src/index.css" for 127.0.0.1 at 2023-07-23 11:58:58 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.css"):
+  
+Started GET "/src/index.css" for 127.0.0.1 at 2023-07-23 11:59:02 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.css"):
+  
+Started GET "/src/index.css" for 127.0.0.1 at 2023-07-23 11:59:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.css"):
+  
+Started GET "/src/index.css" for 127.0.0.1 at 2023-07-23 12:00:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.css"):
+  
+Started GET "/src/index.css" for 127.0.0.1 at 2023-07-23 12:00:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.css"):
+  
+Started POST "/api/users" for 127.0.0.1 at 2023-07-23 12:01:50 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"WendyWetzel", "email"=>"adf@gsdg.com", "password"=>"[FILTERED]", "user"=>{"username"=>"WendyWetzel", "email"=>"adf@gsdg.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "WendyWetzel"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "adf@gsdg.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "email", "created_at", "updated_at", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "WendyWetzel"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"], ["email", "adf@gsdg.com"], ["created_at", "2023-07-23 16:01:51.166527"], ["updated_at", "2023-07-23 16:01:51.166527"], ["birthday", nil]]
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 459ms (ActiveRecord: 5.6ms | Allocations: 6496)
+
+
+
+ActiveRecord::NotNullViolation - PG::NotNullViolation: ERROR:  null value in column "birthday" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (13, WendyWetzel, $2a$12$du.l.OjxB7dXDh7dEJ4gsucy/50FKJ5qUwxFFd3aCJbda98rYrtsa, ohZ29Sm6gChjev5WR3r3Hw, adf@gsdg.com, 2023-07-23 16:01:51.166527, 2023-07-23 16:01:51.166527, null).:
+  app/controllers/api/users_controller.rb:9:in `create'
+
