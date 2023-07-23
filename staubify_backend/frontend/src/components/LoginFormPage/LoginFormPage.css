@@ -16,9 +16,23 @@
     padding: 14px 130px;
     border: 0px;
     border-radius: 36px;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-left: 8px;
     margin-right: 8px;
+}
+
+#demo-login-button{
+    padding: 14px 110px;
+}
+
+.login-page-submit:hover{
+    padding: 16px 134px;
+    margin-top: 26px;
+}
+
+#demo-login-button:hover{
+    padding: 14px 114px;
+    margin-top: 30px;
 }
 
 .login-form{
@@ -68,4 +82,34 @@
 }
 .greyText :first-child:hover{
     color: green;
+}
+
+.login-error{
+    background-color: rgb(189, 8, 8);
+    align-content: center;
+    width: 80%;
+    height: 40px;
+    text-align: left;
+    vertical-align: middle;
+    position: relative;
+    left: 10%;
+}
+.login-error :first-child{
+    margin-left: 25px;
+    padding-top: 10px;
+}
+
+.login-header{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.grey-line{
+    margin-top: 25px;
+    position: relative;
+    margin-bottom: 25px;
+    height: 0px;
+    width: 72%;
+    border-top: 1px solid #1f1f1f;
+    left: 14%
 }

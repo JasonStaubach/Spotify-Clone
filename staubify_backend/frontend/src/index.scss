@@ -3,6 +3,7 @@
 @import 'components/HeaderBar/HeaderBar.css';
 @import 'components/SignupFormPage/SignupFormPage.css';
 @import 'components/LoginFormPage/LoginFormPage.css';
+@import url("https://sass-lang.com/library/functions.scss");
 
 @font-face {
     font-family: "Spotify Circular";
@@ -21,6 +22,11 @@ body{
     height: 500px;
     margin: 0px;
 }
+@media screen and (url-match(location, "/signup")) {
+    body {
+      background-color: white;
+    }
+  }
 
 button{
     background-color: green;

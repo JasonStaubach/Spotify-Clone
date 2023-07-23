@@ -44,7 +44,6 @@ export default function LoginFormPage(){
         // debugger
         const birthday = new Date()
         birthday.setFullYear(year, month, day)
-        debugger
         dispatch(sessionFunctions.signup({username, password, email, birthday})
             ).then(() => history.push("/"))
     }
@@ -58,7 +57,7 @@ export default function LoginFormPage(){
                     <br/>
                     <input 
                         type="text" value={email} placeholder= 'Enter your email.' 
-                        onChange={(e) => setEmail(e.target.value)}>
+                        onChange={(e) => setEmail(e.target.value)} required>
                     </input>
                 </label>
                 <br/>
@@ -66,7 +65,7 @@ export default function LoginFormPage(){
                     <br/>
                     <input 
                         type="text" value={username} placeholder= 'Enter a profile name.'
-                        onChange={(e) => setUsername(e.target.value)}>
+                        onChange={(e) => setUsername(e.target.value)} required>
                     </input>
                 </label>
                 <br/>
@@ -74,7 +73,7 @@ export default function LoginFormPage(){
                     <br/>
                     <input 
                         type="text" value={password} placeholder="Create a password."
-                        onChange={(e) => setPassword(e.target.value)}>
+                        onChange={(e) => setPassword(e.target.value)} required>
                     </input>
                 </label>
 
