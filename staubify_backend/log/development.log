@@ -2122,3 +2122,167 @@ Started GET "/src/index.css" for 127.0.0.1 at 2023-07-22 11:32:01 -0400
   
 ActionController::RoutingError (No route matches [GET] "/src/index.css"):
   
+Started GET "/src/index.css" for 127.0.0.1 at 2023-07-22 11:34:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.css"):
+  
+Started POST "/api/session" for 127.0.0.1 at 2023-07-22 11:34:47 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"Demo", "password"=>"[FILTERED]", "session"=>{"username"=>"Demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:18:in `find_by_credentials'
+Completed 422 Unprocessable Entity in 533ms (Views: 1.5ms | ActiveRecord: 42.9ms | Allocations: 3734)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-07-22 11:34:48 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"Demo", "password"=>"[FILTERED]", "session"=>{"username"=>"Demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:18:in `find_by_credentials'
+Completed 422 Unprocessable Entity in 440ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 825)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-07-22 11:34:49 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"Demo", "password"=>"[FILTERED]", "session"=>{"username"=>"Demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:18:in `find_by_credentials'
+Completed 422 Unprocessable Entity in 439ms (Views: 0.5ms | ActiveRecord: 0.9ms | Allocations: 825)
+
+
+Started GET "/src/index.css" for 127.0.0.1 at 2023-07-22 11:34:52 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.css"):
+  
+Started POST "/api/session" for 127.0.0.1 at 2023-07-22 11:34:58 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"Demo", "password"=>"[FILTERED]", "session"=>{"username"=>"Demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:18:in `find_by_credentials'
+Completed 422 Unprocessable Entity in 440ms (Views: 0.4ms | ActiveRecord: 0.8ms | Allocations: 819)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-07-22 11:35:00 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"Demo", "password"=>"[FILTERED]", "session"=>{"username"=>"Demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:18:in `find_by_credentials'
+Completed 422 Unprocessable Entity in 443ms (Views: 0.5ms | ActiveRecord: 0.7ms | Allocations: 817)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-07-22 11:35:01 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"Demo", "password"=>"[FILTERED]", "session"=>{"username"=>"Demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:18:in `find_by_credentials'
+Completed 422 Unprocessable Entity in 435ms (Views: 0.5ms | ActiveRecord: 0.9ms | Allocations: 826)
+
+
+Started GET "/src/index.css" for 127.0.0.1 at 2023-07-22 11:35:10 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.css"):
+  
+Started POST "/api/session" for 127.0.0.1 at 2023-07-22 11:35:16 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"Demo", "password"=>"[FILTERED]", "session"=>{"username"=>"Demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:18:in `find_by_credentials'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:43:in `reset_session_token!'
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "Demo"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/user.rb:43:in `reset_session_token!'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "abc@gmail.com"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/user.rb:43:in `reset_session_token!'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/user.rb:43:in `reset_session_token!'
+  [1m[36mUser Update (3.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-07-22 15:35:16.646313"], ["id", 9]]
+  ↳ app/models/user.rb:43:in `reset_session_token!'
+  [1m[36mTRANSACTION (46.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:43:in `reset_session_token!'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 2.5ms | Allocations: 119)
+Completed 200 OK in 539ms (Views: 7.2ms | ActiveRecord: 54.5ms | Allocations: 5194)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2023-07-22 11:35:56 -0400
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:43:in `reset_session_token!'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "Demo"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/user.rb:43:in `reset_session_token!'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "abc@gmail.com"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/user.rb:43:in `reset_session_token!'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/user.rb:43:in `reset_session_token!'
+  [1m[36mUser Update (1.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-07-22 15:35:56.936282"], ["id", 9]]
+  ↳ app/models/user.rb:43:in `reset_session_token!'
+  [1m[36mTRANSACTION (46.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:43:in `reset_session_token!'
+Completed 204 No Content in 72ms (ActiveRecord: 50.0ms | Allocations: 4930)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-07-22 11:36:00 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"Demo", "password"=>"[FILTERED]", "session"=>{"username"=>"Demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:18:in `find_by_credentials'
+Completed 422 Unprocessable Entity in 434ms (Views: 0.5ms | ActiveRecord: 0.6ms | Allocations: 817)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-07-22 11:36:01 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"Demo", "password"=>"[FILTERED]", "session"=>{"username"=>"Demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:18:in `find_by_credentials'
+Completed 422 Unprocessable Entity in 445ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 822)
+
+
+Started GET "/src/index.css" for 127.0.0.1 at 2023-07-22 11:36:04 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.css"):
+  
+Started POST "/api/session" for 127.0.0.1 at 2023-07-22 11:36:11 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"Demo", "password"=>"[FILTERED]", "session"=>{"username"=>"Demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:18:in `find_by_credentials'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:43:in `reset_session_token!'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "Demo"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/user.rb:43:in `reset_session_token!'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "abc@gmail.com"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/user.rb:43:in `reset_session_token!'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/user.rb:43:in `reset_session_token!'
+  [1m[36mUser Update (1.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-07-22 15:36:11.826475"], ["id", 9]]
+  ↳ app/models/user.rb:43:in `reset_session_token!'
+  [1m[36mTRANSACTION (45.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:43:in `reset_session_token!'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.6ms | Allocations: 118)
+Completed 200 OK in 511ms (Views: 2.5ms | ActiveRecord: 49.9ms | Allocations: 5178)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2023-07-22 11:36:13 -0400
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:43:in `reset_session_token!'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "Demo"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/user.rb:43:in `reset_session_token!'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "abc@gmail.com"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/user.rb:43:in `reset_session_token!'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/user.rb:43:in `reset_session_token!'
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-07-22 15:36:13.925891"], ["id", 9]]
+  ↳ app/models/user.rb:43:in `reset_session_token!'
+  [1m[36mTRANSACTION (46.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:43:in `reset_session_token!'
+Completed 204 No Content in 72ms (ActiveRecord: 49.9ms | Allocations: 4903)
+
+

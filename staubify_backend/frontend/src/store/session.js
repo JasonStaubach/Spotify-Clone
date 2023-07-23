@@ -59,6 +59,23 @@ export function logout(){
   };
 }
 
+export function signup({username, email, password, birthday}){
+    return async function (dispatch){
+        const res = await csrfFetch("/api/users", {
+            method: "POST",
+            body: JSON.stringify({username, email, password, birthday}),
+            headers: {"X-CSRF-Token": sessionStorage['X-CSRF-Token']}
+        });
+
+        const data = await res.json()
+
+        //logs in user after putting them in database
+        storeCurrentUser(data.user)
+        dispatch(setCurrentUser(data.user))
+        return res
+    }
+}
+
 function storeCurrentUser(user){
     if(user){
         sessionStorage.setItem("currentUser", JSON.stringify(user))
