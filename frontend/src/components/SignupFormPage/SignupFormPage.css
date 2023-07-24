@@ -43,7 +43,7 @@
 
 .red-border :nth-child(2){
     border: 1px red solid;
-    z-index: -5;
+    /* z-index: -5; */
 }
 
 .signup-form button{
@@ -124,4 +124,8 @@
 
 .blackText :first-child:hover{
     color: #0ef35e;
+}
+
+.signin-date-errors{
+    padding: 0px;
 }

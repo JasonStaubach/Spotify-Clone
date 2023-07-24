@@ -96,24 +96,31 @@ export default function LoginFormPage(){
         const eleError = []
 
         if(errors[0]){
-            debugger
             if(errors[0].includes("Select a month") || errors[0].includes("Not a valid date")){
                 document.getElementById("signup-month").classList.add("red-border")
+                eleError.push("Select a month")
             } else {
                 document.getElementById("signup-month").classList.remove("red-border")
             }
             if(errors[0].includes("Select a valid day for this month") || errors[0].includes("Not a valid date")){
-                document.getElementById("signup-day").secondElementChild
+                document.getElementById("signup-day")
                 .classList.add("red-border")
+                eleError.push("Select a valid day for this month")
             } else {
-                document.getElementById("signup-day").secondElementChild
+                document.getElementById("signup-day")
                 .classList.remove("red-border")
             }
             if(errors[0].includes("Birthday must be between 1910 and 2023") || errors[0].includes("Not a valid date")){
-                document.getElementById("signup-year").secondElementChild.classList.add("red-border")
+                document.getElementById("signup-year").classList.add("red-border")
+                eleError.push("Birthday must be between 1910 and 2023")
             } else {
-                document.getElementById("signup-year").secondElementChild.classList.remove("red-border")
+                document.getElementById("signup-year").classList.remove("red-border")
             }
+            return(
+                <ul className="signin-date-errors">
+                    {eleError.map((error) => <div className="red-error-message">{error}</div>)}
+                </ul>
+            )
         }
         // debugger
         if(eleError.length){
@@ -167,7 +174,7 @@ export default function LoginFormPage(){
                                 id="signup-month" className="signup-month" 
                                 onChange={(e) => setMonth(e.target.value)}
                             >
-                                <option value="">Month</option>
+                                <option value={false}>Month</option>
                                 {MONTHS.map((month,i) => (
                                     <option key = {month} value={i}>
                                         {month}
@@ -214,9 +221,9 @@ export default function LoginFormPage(){
                                 onChange={(e) => setYear(e.target.value)} required>
                             </input>
                         </label>
-                        {/* {errors.map((error) => <p>{error}</p>)}
-                        {dateError()} */}
+                        {/* {errors.map((error) => <p>{error}</p>)} */}
                     </label>
+                    {dateError()}
                    
         
                     <button type="submit">Sign Up</button>
