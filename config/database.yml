@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: Staub_ify_production
-  username: Staub_ify
-  password: <%= ENV["STAUB_IFY_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>

@@ -96,14 +96,14 @@ export default function LoginFormPage(){
             else if (data) setErrors([data]);
             else history.push("/");
           })
-        console.log(errors)
+        // console.log(errors)
     }
 
     function eleError(element){
         const eleError = []
         const holdEle = document.getElementById(`signup-${element.toLowerCase()}`)
         if(errors[0]){
-            debugger
+            // debugger
             errors[0].forEach((error) => {
                 if(error.toUpperCase().includes(element.toUpperCase())){
                     eleError.push(error)

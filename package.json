@@ -1,0 +1,26 @@
+{
+  "name": "staubify",
+  "version": "1.0.0",
+  "description": "I am a spotify clone",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "npm install --prefix frontend && npm run build --prefix frontend",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasonStaubach/Spotify-Clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "16.20.0"
+  },
+  "bugs": {
+    "url": "https://github.com/JasonStaubach/Spotify-Clone/issues"
+  },
+  "homepage": "https://github.com/JasonStaubach/Spotify-Clone#readme"
+}
