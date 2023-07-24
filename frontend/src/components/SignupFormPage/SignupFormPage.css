@@ -41,6 +41,11 @@
     border: solid black 1px;
 }
 
+.red-border :nth-child(2){
+    border: 1px red solid;
+    z-index: -5;
+}
+
 .signup-form button{
     /* opacity: 50%;
     display: hidden; */

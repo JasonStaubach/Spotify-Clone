@@ -101,17 +101,22 @@ export default function LoginFormPage(){
 
     function eleError(element){
         const eleError = []
+        const holdEle = document.getElementById(`signup-${element.toLowerCase()}`)
         if(errors[0]){
+            debugger
             errors[0].forEach((error) => {
                 if(error.toUpperCase().includes(element.toUpperCase())){
                     eleError.push(error)
+                    //add className="red-border" to element #signup-form
+                    if(holdEle) holdEle.classList.add("red-border")
                 }
             });
         }
         // debugger
-        if(eleError){
+        if(eleError.length){
             return <div className="red-error-message">{eleError[0]}</div>
         } else {
+            if(holdEle) holdEle.classList.remove("red-border")
             return []
         }
     }
@@ -124,7 +129,7 @@ export default function LoginFormPage(){
                 <div className="light-grey-line"></div>
                 <form onSubmit={handleSubmit} className="signup-form">
                 {/* {errors.map((error) => <div><p>{error}</p></div>)} */}
-                    <label className="signup-email signup-text-letters"> What's your email address?
+                    <label id="signup-email" className="signup-text-letters"> What's your email address?
                         <br/>
                         <input 
                             type="text" value={email} placeholder= 'Enter your email.' 
@@ -133,7 +138,7 @@ export default function LoginFormPage(){
                     </label>
                     {eleError("email")}
                     <br/>
-                    <label className="signup-password signup-text-letters"> Create a password
+                    <label id="signup-password" className="signup-text-letters"> Create a password
                         <br/>
                         <input 
                             type="text" value={password} placeholder="Create a password."
@@ -142,11 +147,11 @@ export default function LoginFormPage(){
                     </label>
                     {eleError("password")}
                     <br/>
-                    <label className="signup-username signup-text-letters"> What should we call you?
+                    <label id="signup-username" className="signup-text-letters"> What should we call you?
                         <br/>
                         <input 
                             type="text" value={username} placeholder= 'Enter a profile name.'
-                            onChange={(e) => setUsername(e.target.value)} required>
+                            onChange={(e) => setUsername(e.target.value)}  required>
                         </input>
                     </label>
                     {eleError("username")}
@@ -184,10 +189,10 @@ export default function LoginFormPage(){
                                 onChange={(e) => setYear(e.target.value)}>
                             </input>
                         </label>
-                        {eleError("day")}
+                        {/* {eleError("day")}
                         {eleError('month')}
                         {eleError('year')}
-                        {eleError("date")}
+                        {eleError("date")} */}
                     </label>
                    
         
