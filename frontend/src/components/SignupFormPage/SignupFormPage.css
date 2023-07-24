@@ -1,0 +1,109 @@
+/* @import 'staubify_backend/frontend/src/fonts/fonts.css'; */
+
+.signup-form-holder{
+    width: 100%;
+    height: 2000px;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.signup-form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.red-error-message{
+    width: 600px;
+    color: red;
+    text-align: left;
+}
+
+.light-grey-line{
+    width: 60%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top: 1px solid lightgray;
+}
+
+.signup-text-letters input{
+    background-color: white;
+    width: 600px;
+    height: 45px;
+    border-radius: 5px;
+    border: solid grey 1px;
+    font-size: medium;
+}
+.signup-text-letters input:hover{
+    border: solid black 1px;
+}
+
+.signup-form button{
+    /* opacity: 50%;
+    display: hidden; */
+    text-decoration: none;
+    color: black;
+
+    margin-top: 20px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.signup-form button:hover{
+    padding: 15px 32px;
+    border-radius: 36px;
+    margin-top: 19px;
+}
+
+.signup-month{
+    display: flex;
+    align-self: left;
+    background-color: white;
+    width: 260px;
+    height: 47px;
+    border-radius: 5px;
+    border: solid grey 1px;
+    /* font-family: CircularSpotifyLight; */
+    font-size: small;
+    color: grey;
+}
+
+.birthday-div{
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    font-family: CircularSpotifyLight;
+}
+ .whats-your-birthday-p{
+    width: 600px;
+    text-align: left;
+}
+
+.birthday-div input{
+    display: flex;
+    align-self: left;
+    background-color: white;
+    width: 128px;
+    height: 45px;
+    border-radius: 5px;
+    border: solid grey 1px;
+    padding: 0px;
+
+}
+
+#signup-day, #signup-year{
+    margin-left: 40px;
+}
+
+.blackText{
+    margin-top: 10px;
+    font-family: CircularSpotifyLight;
+
+}
+
+.blackText :first-child{
+    color: #1DB954;
+}
