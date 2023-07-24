@@ -1,9 +1,9 @@
 class User < ApplicationRecord
     validates :username, :email, :session_token, presence: true, uniqueness: true
     validates :password_digest, presence: true
-    validates :password, length: { in: 6..50 }, allow_nil: true
-    validates :email, length: { in: 3..255 }, format: { with: URI::MailTo::EMAIL_REGEXP, message: "must be valid email" }
-    validates :username,  length: { in: 3..30 }, format: { without: URI::MailTo::EMAIL_REGEXP, message:  "can't be an email" }
+    validates :password, length: { in: 6..50, message:"Your password is too short." }, allow_nil: true
+    validates :email, length: { in: 3..255 }, format: { with: URI::MailTo::EMAIL_REGEXP, message: "This email is invalid. Make sure it’s written like example@email.com" }
+    validates :username,  length: { in: 3..30 }, format: { without: URI::MailTo::EMAIL_REGEXP, message:  "username can't be an email" }
 
   
     attr_reader :password

@@ -31,80 +31,121 @@ export default function LoginFormPage(){
     const [day, setDay] = useState('')
     const [month, setMonth] = useState('')
     const [year, setYear] = useState('')
+    const [errors, setErrors] = useState([])
 
     //redirects to homepage if signin is called while logged in
     if (sessionStorage.currentUser) history.push("/")
 
-    useEffect(()=> {
-        console.log(day)
-    },[day])
+    useEffect(() => {
+        setUsername(username)
+    },[username])
+
+    useEffect(() => {
+        setDay(day);
+        setMonth(month);
+        setYear(year);
+      }, [day, month, year]);
 
     function handleSubmit(e){
         e.preventDefault()
         // debugger
         const birthday = new Date()
         birthday.setFullYear(year, month, day)
-        dispatch(sessionFunctions.signup({username, password, email, birthday})
-            ).then(() => history.push("/"))
+        dispatch(sessionFunctions.signup({username, password, email, birthday}))
+        .catch(async (res) => {
+            let data
+            try {
+              data = await res.clone().json();
+            } catch {
+              data = await res.text();
+            }
+            if (data?.errors) setErrors(data.errors);
+            else if (data) setErrors([data]);
+            else history.push("/");
+          })
     }
 
-        //error handling later
+    function eleError(element){
+        const eleError = []
+        if(errors[0]){
+            errors[0].forEach((error) => {
+                if(error.toUpperCase().includes(element.toUpperCase())){
+                    eleError.push(error)
+                }
+            });
+        }
+        // debugger
+        return eleError.map((error) => <div className="red-error-message">{error}</div>)
+    }
+
+
+
         return(
             <div className="signup-form-holder">
-            <form onSubmit={handleSubmit}>
-                <p>Testing Right</p>
-                <label id="signup-email"> What's your email address?
+                <h2>Sign up for free to start listening.</h2>
+                <div className="light-grey-line"></div>
+                <form onSubmit={handleSubmit} className="signup-form">
+                {/* {errors.map((error) => <div><p>{error}</p></div>)} */}
+                    <label className="signup-email signup-text-letters"> What's your email address?
+                        <br/>
+                        <input 
+                            type="text" value={email} placeholder= 'Enter your email.' 
+                            onChange={(e) => setEmail(e.target.value)} required>
+                        </input>
+                    </label>
+                    {eleError("email")}
                     <br/>
-                    <input 
-                        type="text" value={email} placeholder= 'Enter your email.' 
-                        onChange={(e) => setEmail(e.target.value)} required>
-                    </input>
-                </label>
-                <br/>
-                <label id="signup-username"> What should we call you?
+                    <label className="signup-password signup-text-letters"> Create a password
+                        <br/>
+                        <input 
+                            type="text" value={password} placeholder="Create a password."
+                            onChange={(e) => setPassword(e.target.value)} required>
+                        </input>
+                    </label>
+                    {eleError("password")}
                     <br/>
-                    <input 
-                        type="text" value={username} placeholder= 'Enter a profile name.'
-                        onChange={(e) => setUsername(e.target.value)} required>
-                    </input>
-                </label>
-                <br/>
-                <label id="signup-password"> Create a password.
+                    <label className="signup-username signup-text-letters"> What should we call you?
+                        <br/>
+                        <input 
+                            type="text" value={username} placeholder= 'Enter a profile name.'
+                            onChange={(e) => setUsername(e.target.value)} required>
+                        </input>
+                    </label>
+                    {eleError("username")}
                     <br/>
-                    <input 
-                        type="text" value={password} placeholder="Create a password."
-                        onChange={(e) => setPassword(e.target.value)} required>
-                    </input>
-                </label>
+                    <label>what's your date of birth?
+                        <select onChange={(e) => setMonth(e.target.value)}>Month
+                            <option value="">Select a Month</option>
+                            {MONTHS.map((month,i) => (
+                                <option key = {month} value={i}>
+                                    {month}
+                                </option>
+                            ))}
+                        </select>
+                        <br/>
 
-                <br/>
+                        <label id="signup-day"> Day
+                            <input 
+                                type="text" value={day} placeholder="DD"
+                                onChange={(e) => setDay(e.target.value)}>
+                            </input>
+                        </label>
 
-                <select onChange={(e) => setMonth(e.target.value)}>Month
-                    <option value="">Select a Month</option>
-                    {MONTHS.map((month,i) => (
-                        <option key = {month} value={i}>
-                            {month}
-                        </option>
-                    ))}
-                </select>
-                <br/>
-
-                <label id="signup-day"> Day
-                    <input 
-                        type="text" value={day} placeholder="DD"
-                        onChange={(e) => setDay(e.target.value)}>
-                    </input>
-                </label>
-
-                <label id="signup-year"> Year
-                    <input 
-                        type="text" value={year} placeholder="YYYY"
-                        onChange={(e) => setYear(e.target.value)}>
-                    </input>
-                </label>
-    
-                <button type="submit">Sign Up</button>
-            </form>
+                        <label id="signup-year"> Year
+                            <input 
+                                type="text" value={year} placeholder="YYYY"
+                                onChange={(e) => setYear(e.target.value)}>
+                            </input>
+                        </label>
+                        {eleError("day")}
+                        {eleError('month')}
+                        {eleError('year')}
+                        {eleError("date")}
+                    </label>
+                   
+        
+                    <button type="submit">Sign Up</button>
+                </form>
             </div>
         )
 

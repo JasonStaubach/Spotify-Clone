@@ -25,6 +25,7 @@ body{
 @media screen and (url-match(location, "/signup")) {
     body {
       background-color: white;
+      border-top: 5px solid green;
     }
   }
 
