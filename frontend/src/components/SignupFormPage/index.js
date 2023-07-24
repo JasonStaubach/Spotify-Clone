@@ -29,8 +29,8 @@ export default function LoginFormPage(){
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [email, setEmail] = useState('')
-    const [day, setDay] = useState('')
-    const [month, setMonth] = useState('')
+    const [day, setDay] = useState("")
+    const [month, setMonth] = useState(false)
     const [year, setYear] = useState('')
     const [errors, setErrors] = useState([])
 
@@ -41,42 +41,8 @@ export default function LoginFormPage(){
         setUsername(username)
     },[username])
 
-    // useEffect(() => {
-    //     setMonth(month);
+   
 
-    //     if(!month){
-    //         setErrors(errors.push('Select your birth month.'))
-    //     } else if (errors.includes('Select your birth month.')){
-    //         let i = errors.indexOf('Select your birth month.')
-    //         setErrors(errors.splice(i, 1))
-    //     }
-
-    //   }, [month]);
-    
-    // useEffect(() => {
-    //     setDay(day);
-
-    //     if((!(day.isInteger) || day > 31) ||
-    //     (["April", "June", "September", "November"].includes(month) && day > 30) ||
-    //     (year && month === "February" && year%4 === 0 && day>29) || 
-    //     (month === "February" && day>28)){
-    //         setErrors(errors.push('Enter a valid day of the month.'))
-    //     } else if(errors.includes('Enter a valid day of the month.')){
-    //         let i = errors.indexOf('Enter a valid day of the month.')
-    //         setErrors(errors.splice(i, 1))
-    //     }
-    //   }, [day]);
-
-    // useEffect(() => {
-    //     setYear(year)
-
-    //     if(!(year.isInteger)|| year>2023 || year < 1910){
-    //         setErrors(errors.push('Enter a valid year.'))
-    //     } else if (errors.includes('Enter a valid year.')){
-    //         let i = errors.indexOf('Enter a valid year.')
-    //         setErrors(errors.splice(i, 1))
-    //     }
-    // },[year])
 
 
     function handleSubmit(e){
@@ -85,6 +51,11 @@ export default function LoginFormPage(){
         const birthday = new Date()
         birthday.setFullYear(year, month, day)
         dispatch(sessionFunctions.signup({username, password, email, birthday}))
+        .then(res => {
+            if (res.ok) {
+                history.push('/');
+            }
+        })
         .catch(async (res) => {
             let data
             try {
@@ -94,8 +65,8 @@ export default function LoginFormPage(){
             }
             if (data?.errors) setErrors(data.errors);
             else if (data) setErrors([data]);
-            else history.push("/");
-          })
+            // else history.push("/");
+        })
         // console.log(errors)
     }
 
@@ -117,6 +88,38 @@ export default function LoginFormPage(){
             return <div className="red-error-message">{eleError[0]}</div>
         } else {
             if(holdEle) holdEle.classList.remove("red-border")
+            return []
+        }
+    }
+
+    function dateError(){
+        const eleError = []
+
+        if(errors[0]){
+            debugger
+            if(errors[0].includes("Select a month") || errors[0].includes("Not a valid date")){
+                document.getElementById("signup-month").classList.add("red-border")
+            } else {
+                document.getElementById("signup-month").classList.remove("red-border")
+            }
+            if(errors[0].includes("Select a valid day for this month") || errors[0].includes("Not a valid date")){
+                document.getElementById("signup-day").secondElementChild
+                .classList.add("red-border")
+            } else {
+                document.getElementById("signup-day").secondElementChild
+                .classList.remove("red-border")
+            }
+            if(errors[0].includes("Birthday must be between 1910 and 2023") || errors[0].includes("Not a valid date")){
+                document.getElementById("signup-year").secondElementChild.classList.add("red-border")
+            } else {
+                document.getElementById("signup-year").secondElementChild.classList.remove("red-border")
+            }
+        }
+        // debugger
+        if(eleError.length){
+            return <div className="red-error-message">{eleError[0]}</div>
+        } else {
+            // if(holdEle) holdEle.classList.remove("red-border")
             return []
         }
     }
@@ -178,7 +181,29 @@ export default function LoginFormPage(){
                             <br/>
                             <input 
                                 type="text" value={day} placeholder="DD"
-                                onChange={(e) => setDay(e.target.value)}>
+                                onChange={(e) => {
+                                    const val = e.target.value;
+                                    if (val <= 31) {
+                                        setDay(e.target.value)
+                                        if(errors[0] && errors[0].includes('Day cannot be larger than 31')){
+                                            let i = errors[0].indexOf('Day cannot be larger than 31')
+                                            errors[0].splice(i,1)
+                                        }
+                                    } else {
+                                        setErrors(errors => {
+                                            if(errors[0] && !errors[0].includes('Day cannot be larger than 31')){
+                                                const newErrors = [...errors];
+                                                // debugger;
+                                                if (!newErrors[0]) newErrors.push([]);
+                                                newErrors[0].push('Day cannot be larger than 31');
+
+                                                return newErrors;
+                                            } else {
+                                                return errors;
+                                            }
+                                        })
+                                    }
+                                }} required>
                             </input>
                         </label>
 
@@ -186,13 +211,11 @@ export default function LoginFormPage(){
                             <br/>
                             <input 
                                 type="text" value={year} placeholder="YYYY"
-                                onChange={(e) => setYear(e.target.value)}>
+                                onChange={(e) => setYear(e.target.value)} required>
                             </input>
                         </label>
-                        {/* {eleError("day")}
-                        {eleError('month')}
-                        {eleError('year')}
-                        {eleError("date")} */}
+                        {/* {errors.map((error) => <p>{error}</p>)}
+                        {dateError()} */}
                     </label>
                    
         

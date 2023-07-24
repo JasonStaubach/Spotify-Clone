@@ -72,7 +72,7 @@ export function signup({username, email, password, birthday}){
         //logs in user after putting them in database
         storeCurrentUser(data.user)
         dispatch(setCurrentUser(data.user))
-        return
+        return res;
     }
 }
 
