@@ -4274,3 +4274,295 @@ Processing by Api::UsersController#create as JSON
 Completed 422 Unprocessable Entity in 483ms (Views: 0.3ms | ActiveRecord: 14.5ms | Allocations: 9013)
 
 
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 09:20:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 09:23:51 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 09:24:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 09:24:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 09:26:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 09:27:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 09:29:51 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 09:34:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 09:35:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 09:36:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 09:36:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 09:40:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 09:40:41 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 09:40:50 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 09:42:50 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 09:45:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 09:47:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 09:47:44 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 09:48:28 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 09:49:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 09:49:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 09:50:02 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 09:51:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 09:53:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started POST "/api/session" for 127.0.0.1 at 2023-07-24 09:56:36 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"hu", "password"=>"[FILTERED]", "session"=>{"username"=>"hu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "hu"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:18:in `find_by_credentials'
+Completed 422 Unprocessable Entity in 11ms (Views: 0.2ms | ActiveRecord: 3.7ms | Allocations: 3693)
+
+
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 09:59:35 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started POST "/api/users" for 127.0.0.1 at 2023-07-24 10:00:31 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"ji", "email"=>"ji", "password"=>"[FILTERED]", "birthday"=>"0012-09-01T15:16:19.354Z", "user"=>{"username"=>"ji", "email"=>"ji", "birthday"=>"0012-09-01T15:16:19.354Z", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ji"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ji"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+Completed 422 Unprocessable Entity in 193ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 6142)
+
+
+Started GET "/src/index.scss" for 127.0.0.1 at 2023-07-24 10:00:35 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.scss"):
+  
+Started POST "/api/users" for 127.0.0.1 at 2023-07-24 10:01:33 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"ji", "email"=>"ji", "password"=>"[FILTERED]", "birthday"=>"0012-09-01T15:17:16.967Z", "user"=>{"username"=>"ji", "email"=>"ji", "birthday"=>"0012-09-01T15:17:16.967Z", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ji"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ji"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+Completed 422 Unprocessable Entity in 192ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 6103)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2023-07-24 10:02:48 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"ji", "email"=>"ji", "password"=>"[FILTERED]", "birthday"=>"0012-09-01T15:18:26.211Z", "user"=>{"username"=>"ji", "email"=>"ji", "birthday"=>"0012-09-01T15:18:26.211Z", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ji"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ji"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+Completed 422 Unprocessable Entity in 190ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 6101)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2023-07-24 10:03:18 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"ji", "email"=>"ji", "password"=>"[FILTERED]", "birthday"=>"0012-09-01T15:18:53.868Z", "user"=>{"username"=>"ji", "email"=>"ji", "birthday"=>"0012-09-01T15:18:53.868Z", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ji"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ji"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+Completed 422 Unprocessable Entity in 192ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 6113)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2023-07-24 10:03:43 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"ji", "email"=>"ji", "password"=>"[FILTERED]", "birthday"=>"0012-09-01T15:19:16.812Z", "user"=>{"username"=>"ji", "email"=>"ji", "birthday"=>"0012-09-01T15:19:16.812Z", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ji"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ji"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+Completed 422 Unprocessable Entity in 193ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 6096)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2023-07-24 10:04:59 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"ji", "email"=>"ji", "password"=>"[FILTERED]", "birthday"=>"0012-09-01T15:20:26.381Z", "user"=>{"username"=>"ji", "email"=>"ji", "birthday"=>"0012-09-01T15:20:26.381Z", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ji"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ji"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+Completed 422 Unprocessable Entity in 190ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 6104)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2023-07-24 10:05:03 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"ji", "email"=>"ji", "password"=>"[FILTERED]", "birthday"=>"0012-09-01T15:20:30.332Z", "user"=>{"username"=>"ji", "email"=>"ji", "birthday"=>"0012-09-01T15:20:30.332Z", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ji"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ji"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+Completed 422 Unprocessable Entity in 192ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 6113)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2023-07-24 10:05:19 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"ji", "email"=>"ji", "password"=>"[FILTERED]", "birthday"=>"0012-09-01T15:20:45.556Z", "user"=>{"username"=>"ji", "email"=>"ji", "birthday"=>"0012-09-01T15:20:45.556Z", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ji"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ji"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+Completed 422 Unprocessable Entity in 191ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 6108)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2023-07-24 10:05:34 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"ji", "email"=>"ji", "password"=>"[FILTERED]", "birthday"=>"0012-09-01T15:20:58.938Z", "user"=>{"username"=>"ji", "email"=>"ji", "birthday"=>"0012-09-01T15:20:58.938Z", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ji"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ji"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+Completed 422 Unprocessable Entity in 190ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 6104)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2023-07-24 10:06:58 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"hu", "email"=>"hu", "password"=>"[FILTERED]", "birthday"=>"-000001-12-31T15:22:16.382Z", "user"=>{"username"=>"hu", "email"=>"hu", "birthday"=>"-000001-12-31T15:22:16.382Z", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "hu"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "hu"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:11:in `create'
+Completed 422 Unprocessable Entity in 202ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 6113)
+
+

@@ -63,6 +63,7 @@ export default function LoginFormPage(){
             else if (data) setErrors([data]);
             else history.push("/");
           })
+        console.log(errors)
     }
 
     function eleError(element){
@@ -75,7 +76,11 @@ export default function LoginFormPage(){
             });
         }
         // debugger
-        return eleError.map((error) => <div className="red-error-message">{error}</div>)
+        if(eleError){
+            return <div className="red-error-message">{eleError[0]}</div>
+        } else {
+            return []
+        }
     }
 
 
@@ -113,18 +118,23 @@ export default function LoginFormPage(){
                     </label>
                     {eleError("username")}
                     <br/>
-                    <label>what's your date of birth?
-                        <select onChange={(e) => setMonth(e.target.value)}>Month
-                            <option className="signup-month" value="">Select a Month</option>
-                            {MONTHS.map((month,i) => (
-                                <option key = {month} value={i}>
-                                    {month}
-                                </option>
-                            ))}
-                        </select>
+                    <p className="whats-your-birthday-p">What's your date of birth?</p>
+                    <label className="birthday-div">
+                    <br/>
+                        <label className= "month-label">Month
+                            <select className="signup-month" onChange={(e) => setMonth(e.target.value)}>Month
+                                <option value="">Month</option>
+                                {MONTHS.map((month,i) => (
+                                    <option key = {month} value={i}>
+                                        {month}
+                                    </option>
+                                ))}
+                            </select>
+                        </label>
                         <br/>
 
                         <label id="signup-day"> Day
+                            <br/>
                             <input 
                                 type="text" value={day} placeholder="DD"
                                 onChange={(e) => setDay(e.target.value)}>
@@ -132,6 +142,7 @@ export default function LoginFormPage(){
                         </label>
 
                         <label id="signup-year"> Year
+                            <br/>
                             <input 
                                 type="text" value={year} placeholder="YYYY"
                                 onChange={(e) => setYear(e.target.value)}>
