@@ -41,11 +41,43 @@ export default function LoginFormPage(){
         setUsername(username)
     },[username])
 
-    useEffect(() => {
-        setDay(day);
-        setMonth(month);
-        setYear(year);
-      }, [day, month, year]);
+    // useEffect(() => {
+    //     setMonth(month);
+
+    //     if(!month){
+    //         setErrors(errors.push('Select your birth month.'))
+    //     } else if (errors.includes('Select your birth month.')){
+    //         let i = errors.indexOf('Select your birth month.')
+    //         setErrors(errors.splice(i, 1))
+    //     }
+
+    //   }, [month]);
+    
+    // useEffect(() => {
+    //     setDay(day);
+
+    //     if((!(day.isInteger) || day > 31) ||
+    //     (["April", "June", "September", "November"].includes(month) && day > 30) ||
+    //     (year && month === "February" && year%4 === 0 && day>29) || 
+    //     (month === "February" && day>28)){
+    //         setErrors(errors.push('Enter a valid day of the month.'))
+    //     } else if(errors.includes('Enter a valid day of the month.')){
+    //         let i = errors.indexOf('Enter a valid day of the month.')
+    //         setErrors(errors.splice(i, 1))
+    //     }
+    //   }, [day]);
+
+    // useEffect(() => {
+    //     setYear(year)
+
+    //     if(!(year.isInteger)|| year>2023 || year < 1910){
+    //         setErrors(errors.push('Enter a valid year.'))
+    //     } else if (errors.includes('Enter a valid year.')){
+    //         let i = errors.indexOf('Enter a valid year.')
+    //         setErrors(errors.splice(i, 1))
+    //     }
+    // },[year])
+
 
     function handleSubmit(e){
         e.preventDefault()
@@ -123,7 +155,10 @@ export default function LoginFormPage(){
                     <label className="birthday-div">
                     <br/>
                         <label className= "month-label">Month
-                            <select className="signup-month" onChange={(e) => setMonth(e.target.value)}>Month
+                            <select 
+                                id="signup-month" className="signup-month" 
+                                onChange={(e) => setMonth(e.target.value)}
+                            >
                                 <option value="">Month</option>
                                 {MONTHS.map((month,i) => (
                                     <option key = {month} value={i}>

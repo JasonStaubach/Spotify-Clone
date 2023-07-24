@@ -2,7 +2,8 @@ import React from 'react';
 import { Link, Route, Switch } from 'react-router-dom'
 import LoginFormPage from './components/LoginFormPage';
 import HeaderBar from './components/HeaderBar';
-import SignupFormPage from './components/SignupFormPage'
+import SignupFormPage from './components/SignupFormPage';
+import Homepage from "./components/Homepage";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <SignupFormPage />
         </Route>
         <Route path="/">
-          <HeaderBar/>
+          <Homepage/>
           {/* <h1>Temp Splash Page</h1>
           <Link to="/login">Login</Link> */}
         </Route>

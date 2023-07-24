@@ -65,9 +65,13 @@
     height: 47px;
     border-radius: 5px;
     border: solid grey 1px;
-    /* font-family: CircularSpotifyLight; */
+    font-family: CircularSpotifyLight;
     font-size: small;
-    color: grey;
+    color: black;
+}
+
+#signup-month:hover{
+    border: 1px black solid;
 }
 
 .birthday-div{
@@ -93,6 +97,11 @@
     padding: 0px;
 
 }
+.birthday-div input:hover{
+    border: solid black 1px;
+}
+
+
 
 #signup-day, #signup-year{
     margin-left: 40px;
@@ -106,4 +115,8 @@
 
 .blackText :first-child{
     color: #1DB954;
+}
+
+.blackText :first-child:hover{
+    color: #0ef35e;
 }
