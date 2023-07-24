@@ -4,7 +4,7 @@ class User < ApplicationRecord
     validates :password, length: { in: 6..50, message:"Your password is too short." }, allow_nil: true
     validates :email, length: { in: 3..255 }, format: { with: URI::MailTo::EMAIL_REGEXP, message: "This email is invalid. Make sure it’s written like example@email.com" }
     validates :username,  length: { in: 3..30 }, format: { without: URI::MailTo::EMAIL_REGEXP, message:  "username can't be an email" }
-
+    validates :birthday, presence: true
   
     attr_reader :password
   
