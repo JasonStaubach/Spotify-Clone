@@ -60,6 +60,7 @@
 
 .log :first-child{
     text-decoration: none;
+    color: black;
 }
 
 .login-head-button :first-child:visited{
