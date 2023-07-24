@@ -7,7 +7,6 @@
 .login-page-submit{
     /* opacity: 50%;
     display: hidden; */
-    font-family: "Spotify Circular";
     text-decoration: none;
     background-color: green;
     color: #000000;
@@ -31,8 +30,8 @@
 }
 
 #demo-login-button:hover{
-    padding: 14px 114px;
-    margin-top: 30px;
+    padding: 16px 114px;
+    margin-top: 28px;
 }
 
 .login-form{
@@ -53,6 +52,7 @@
     border-radius: 8px;
     width: 65%;
     text-align: center;
+    color: white;
 }
 .inner-login-page label{
     text-align: left;

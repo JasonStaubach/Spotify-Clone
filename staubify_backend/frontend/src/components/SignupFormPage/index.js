@@ -115,7 +115,7 @@ export default function LoginFormPage(){
                     <br/>
                     <label>what's your date of birth?
                         <select onChange={(e) => setMonth(e.target.value)}>Month
-                            <option value="">Select a Month</option>
+                            <option className="signup-month" value="">Select a Month</option>
                             {MONTHS.map((month,i) => (
                                 <option key = {month} value={i}>
                                     {month}

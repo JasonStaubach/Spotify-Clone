@@ -37,7 +37,6 @@
 .signup-form button{
     /* opacity: 50%;
     display: hidden; */
-    font-family: "Spotify Circular";
     text-decoration: none;
     background-color: green;
     color: black;
@@ -54,4 +53,13 @@
     padding: 15px 32px;
     border-radius: 36px;
     margin-top: 19px;
+}
+
+.signup-month{
+    background-color: white;
+    width: 600px;
+    height: 45px;
+    border-radius: 5px;
+    border: solid grey 1px;
+    font-size: medium;
 }

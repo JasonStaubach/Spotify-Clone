@@ -27,7 +27,6 @@
 .login-head-button{
     /* opacity: 50%;
     display: hidden; */
-    font-family: "Spotify Circular";
     text-decoration: none;
     background-color: #ffffff;
     color: #000000;
@@ -46,12 +45,10 @@
 }
 
 .log :first-child{
-    font-family: "Spotify Circular";
     text-decoration: none;
 }
 
 .login-head-button :first-child:visited{
-    font-family: "Spotify Circular";
     text-decoration: none;
     color: black;
 }
@@ -59,7 +56,6 @@
 .signup-head-button{
     /* opacity: 50%;
     display: hidden; */
-    font-family: "Spotify Circular";
     text-decoration: none;
     background-color: black;
     color: white;
@@ -73,10 +69,6 @@
 }
 
 .signup-head-button :first-child:visited{
-    font-family: "Spotify Circular";
     text-decoration: none;
     color: white;
-}
-p{
-    font-family: "Spotify Circular";
 }
