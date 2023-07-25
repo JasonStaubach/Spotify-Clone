@@ -52,10 +52,8 @@
     margin-left: 8px;
     margin-right: 8px;
 }
-.login-head-button:hover{
-    padding: 14px 32px;
-    border-radius: 36px;
-    margin-left: 4px;
+.header-bar button:hover{
+    transform: scale(1.05);
 }
 
 .log :first-child{
