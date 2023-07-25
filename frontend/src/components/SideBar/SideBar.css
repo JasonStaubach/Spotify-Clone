@@ -1,4 +1,7 @@
 #side-bar{
     height: 100%;
-    width: 50px;
+    width: 20%;
+    display: fixed;
+    margin: 0px;
+    border: darkturquoise 1px solid;
 }
