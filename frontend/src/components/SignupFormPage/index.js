@@ -48,8 +48,9 @@ export default function LoginFormPage(){
     function handleSubmit(e){
         e.preventDefault()
         // debugger
-        const birthday = new Date()
-        birthday.setFullYear(year, month, day)
+        // const birthday = new Date()
+        // birthday.setFullYear(year, month, day)
+        const birthday = `${year}-${month}-${day}`
         dispatch(sessionFunctions.signup({username, password, email, birthday}))
         .then(res => {
             if (res.ok) {
@@ -131,6 +132,33 @@ export default function LoginFormPage(){
         }
     }
 
+    function validate_day(day){
+            // const day = e.target.value;
+            console.log(month)
+            if (day < 0 || day > 31 || 
+                (["November","September","April","June"].includes(month) && day > 30) ||
+                (month === "February" && (day>28 || year && (year%4===0 && day >29)))){ 
+                    setErrors(errors => {
+                        if(errors[0] && !errors[0].includes('Day cannot be larger than 31')){
+                            const newErrors = [...errors];
+                            // debugger;
+                            if (!newErrors[0]) newErrors.push([]);
+                            newErrors[0].push('Day cannot be larger than 31');
+    
+                            return newErrors;
+                        } else {
+                            return errors;
+                        }
+                    })
+            } else {
+            setDay(day)
+                if(errors[0] && errors[0].includes('Day cannot be larger than 31')){
+                    let i = errors[0].indexOf('Day cannot be larger than 31')
+                    errors[0].splice(i,1)
+                }
+            }
+    }
+
 
 
         return(
@@ -188,29 +216,7 @@ export default function LoginFormPage(){
                             <br/>
                             <input 
                                 type="text" value={day} placeholder="DD"
-                                onChange={(e) => {
-                                    const val = e.target.value;
-                                    if (val <= 31) {
-                                        setDay(e.target.value)
-                                        if(errors[0] && errors[0].includes('Day cannot be larger than 31')){
-                                            let i = errors[0].indexOf('Day cannot be larger than 31')
-                                            errors[0].splice(i,1)
-                                        }
-                                    } else {
-                                        setErrors(errors => {
-                                            if(errors[0] && !errors[0].includes('Day cannot be larger than 31')){
-                                                const newErrors = [...errors];
-                                                // debugger;
-                                                if (!newErrors[0]) newErrors.push([]);
-                                                newErrors[0].push('Day cannot be larger than 31');
-
-                                                return newErrors;
-                                            } else {
-                                                return errors;
-                                            }
-                                        })
-                                    }
-                                }} required>
+                                onChange={(e) => validate_day(e.target.value)} required>
                             </input>
                         </label>
 

@@ -12,6 +12,7 @@
     margin-top: 30px;
     margin-left: 8px;
     margin-right: 8px;
+    font-family: CircularSpotifyBold;
 }
 
 #demo-login-button{
@@ -19,14 +20,17 @@
 }
 
 .login-page-submit:hover{
-    padding: 16px 134px;
+    padding: 16px 138px;
     margin-top: 28px;
     margin-bottom: -2px;
+    font-size: 17px;
 }
 
 #demo-login-button:hover{
-    padding: 16px 110px;
+    padding: 16px 112px;
     margin-top: 28px;
+    margin-bottom: -2px;
+    font-size: 17px;
 }
 
 .login-form{

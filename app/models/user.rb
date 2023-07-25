@@ -47,8 +47,6 @@ class User < ApplicationRecord
 
     def valid_year?
 
-      debugger
-
       if(!birthday) 
         errors.add(:birthday, "Not a valid date")
       else
@@ -61,7 +59,6 @@ class User < ApplicationRecord
     end
       
     def valid_month?
-      debugger
       if(!birthday) 
         errors.add(:birthday, "Not a valid date")
       else
@@ -78,7 +75,7 @@ class User < ApplicationRecord
         errors.add(:birthday, "Not a valid date")
       else
 
-        debugger
+        # debugger
 
         if (birthday.day < 1 || birthday.day > 31 ||
           ["November","September","April","June"].include?(birthday.month) || birthday.day > 30 ||
