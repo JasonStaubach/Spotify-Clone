@@ -5,13 +5,14 @@
     height: 100%;
     border: 1px red solid;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
 }
 
 #home-page-right{
-    width:50%;
+    width:95%;
+    min-width: 50%;
     height: 100%;
-    border: 1px green solid;
+    border: 3px green solid;
 }
 
 #fixed-page{
