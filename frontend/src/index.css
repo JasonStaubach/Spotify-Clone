@@ -4,6 +4,7 @@
 @import 'components/SignupFormPage/SignupFormPage.css';
 @import 'components/LoginFormPage/LoginFormPage.css';
 @import './fonts/fonts.css';
+@import 'components/SideBar/SideBar.css';
 
 
 body{
