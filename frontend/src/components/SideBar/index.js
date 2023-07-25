@@ -4,12 +4,12 @@ import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 import { Link } from 'react-router-dom'
 import { useHistory } from "react-router-dom";
 
-export default function SideBar(){
+export default function SideBar({sideBarRef}){
     const dispatch = useDispatch()
     const history = useHistory()
 
     return(
-        <div id="side-bar">
+        <div id="side-bar" ref={sideBarRef}>
             
         </div>
     )
