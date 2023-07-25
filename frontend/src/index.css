@@ -29,7 +29,7 @@ button{
     border-radius: 36px;
 }
 
-h1, h2, h4, input, label, button, select, option, p {
+h1, h2, h4, input, label, button, select, option, p, a {
   font-family: CircularSpotifyMedium;
 }
 div{
@@ -42,3 +42,6 @@ div{
     height: 100%;
 }
 
+input{
+  padding-left: 9px;
+}

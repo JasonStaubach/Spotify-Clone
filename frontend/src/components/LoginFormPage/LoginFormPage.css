@@ -78,6 +78,7 @@
 
 .greyText :first-child{
     color: white;
+    padding-left: 8px;
 }
 .greyText :first-child:hover{
     color: 	#1DB954;

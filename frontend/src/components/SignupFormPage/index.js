@@ -137,7 +137,7 @@ export default function LoginFormPage(){
             console.log(month + 1)
             if (day < 0 || day > 31 || 
                 (["10","8","3","5"].includes(month) && day > 30) ||
-                (month === "1" && (day>28 || year && (year%4===0 && day >29)))){ 
+                (month === "1" && (day > 28 || (year && year % 4===0 && day >29)))){ 
                     setErrors(errors => {
                         if(errors[0] && !errors[0].includes('Day cannot be larger than 31')){
                             const newErrors = [...errors];
@@ -163,6 +163,9 @@ export default function LoginFormPage(){
 
         return(
             <div className="signup-form-holder">
+                <div className="white-logo">
+                    <a href="/">Spotify</a>
+                </div>
                 <h2>Sign up for free to start listening.</h2>
                 <div className="light-grey-line"></div>
                 <form onSubmit={handleSubmit} className="signup-form">

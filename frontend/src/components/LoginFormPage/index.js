@@ -56,7 +56,9 @@ export default function LoginFormPage(){
             <div className="login-top-bar"></div>
             <div className="inner-login-page">
                 <h1 className="login-header">Log In to Staubify</h1>
-                {errors.map((error) => <div className="login-error"><p>{error}</p></div>)}
+                {errors.map((error) => <div className="login-error">
+                    <p>{error}</p>
+                </div>)}
                 <div className="grey-line"/>
                 <form className="login-form" onSubmit={handleSubmit}>
                     <label id="login-username"> Email or username
