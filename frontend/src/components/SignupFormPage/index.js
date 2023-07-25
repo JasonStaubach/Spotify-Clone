@@ -134,10 +134,10 @@ export default function LoginFormPage(){
 
     function validate_day(day){
             // const day = e.target.value;
-            console.log(month)
+            console.log(month + 1)
             if (day < 0 || day > 31 || 
-                (["November","September","April","June"].includes(month) && day > 30) ||
-                (month === "February" && (day>28 || year && (year%4===0 && day >29)))){ 
+                (["10","8","3","5"].includes(month) && day > 30) ||
+                (month === "1" && (day>28 || year && (year%4===0 && day >29)))){ 
                     setErrors(errors => {
                         if(errors[0] && !errors[0].includes('Day cannot be larger than 31')){
                             const newErrors = [...errors];
