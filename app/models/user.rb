@@ -46,19 +46,22 @@ class User < ApplicationRecord
     end
 
     def valid_year?
-      
+
+      debugger
+
       if(!birthday) 
         errors.add(:birthday, "Not a valid date")
       else
         if birthday.year < 1910 || birthday.year > 2023
           errors.add(:birthday, "must be between 1910 and 2023")
+          return false
         end
       end
       true
     end
       
     def valid_month?
-      # debugger
+      debugger
       if(!birthday) 
         errors.add(:birthday, "Not a valid date")
       else
@@ -74,7 +77,12 @@ class User < ApplicationRecord
       if(!birthday)
         errors.add(:birthday, "Not a valid date")
       else
-        if birthday.day < 1 || birthday.day > 31
+
+        debugger
+
+        if (birthday.day < 1 || birthday.day > 31 ||
+          ["November","September","April","June"].include?(birthday.month) || birthday.day > 30 ||
+          birthday.month === "February")
           errors.add(:birthday, "Select a valid day for this month")
         end
       end

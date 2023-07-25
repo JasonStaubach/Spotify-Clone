@@ -20,6 +20,11 @@ export default function LoginFormPage(){
         e.preventDefault()
         // debugger
         dispatch(sessionFunctions.login({username, password}))
+        .then(res => {
+            if (res.ok) {
+                history.push('/');
+            }
+        })
         .catch(async (res) => {
             let data
             try {
