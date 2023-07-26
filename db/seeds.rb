@@ -7,7 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 ApplicationRecord.transaction do 
     puts "Creating users"
-    # User.create!(username: 'Demo', password: 'password', birthday: Date.new(2001,4,5), email: "abc@gmail.com")
+    User.create!(username: 'Demo', password: 'password', birthday: Date.new(2001,4,5), email: "abc@gmail.com")
     puts "Creating artists"
-    # Artist.create!(name: "Seal")
+    Artist.create!(name: "Seal")
 end

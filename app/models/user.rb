@@ -70,7 +70,6 @@ class User < ApplicationRecord
     end
 
     def valid_day?
-      debugger
       if(!birthday)
         errors.add(:birthday, "Not a valid date")
       else

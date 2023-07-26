@@ -29,3 +29,19 @@
     border: 1px lightcyan solid;
     height: 100%;
 }
+
+#homepage-display{
+    height: inherit;
+    width: auto;
+    position: static;
+    display: flex;
+    align-items: column;
+    background-color: red;
+    z-index: -3;
+}
+
+.homepage-row{
+    margin-top: 100px;
+    background-color: red;
+    display: static;
+}

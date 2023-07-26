@@ -15,6 +15,7 @@ export default function HomePage(){
     const resizeBarRef = useRef(null);
     const sideBarRef = useRef(null);
     const headBarRef = useRef(null);
+    const invisHeadBarRef = useRef(null);
 
     const handleDrag = (e) => {
         // console.log("Draggin");
@@ -23,7 +24,8 @@ export default function HomePage(){
         if (e.clientX > 0){
             console.log(`${e.clientX} px`);
             homepageRightRef.current.style.width = `${window.innerWidth - e.clientX}px`;
-            headBarRef.current.style.width = `${window.innerWidth - e.clientX}px`;
+            headBarRef.current.style.width = `${(window.innerWidth - e.clientX) * 0.95}px`;
+            invisHeadBarRef.current.style.width = `${(window.innerWidth - e.clientX) * 0.95}px`;
             sideBarRef.current.style.width = `${e.clientX}px`;
         }
     };
@@ -39,7 +41,10 @@ export default function HomePage(){
                         onDrag={handleDrag}
                         />
                     <div id="home-page-right" ref={homepageRightRef}>
-                        <HeaderBar headBarRef={headBarRef}/>
+                        <HeaderBar headBarRef={headBarRef} invisHeadBarRef={invisHeadBarRef}/>
+                        <div id="homepage-display">
+                            <div className="homepage-row"></div>
+                        </div>
                     </div>
                 </div>
             </div>
