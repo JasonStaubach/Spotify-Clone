@@ -9,6 +9,9 @@ function App() {
   return (
     <>
       <Switch>
+        {/* <Route path="/artist">
+
+        </Route> */}
         <Route path="/login">
           <LoginFormPage />
         </Route>
