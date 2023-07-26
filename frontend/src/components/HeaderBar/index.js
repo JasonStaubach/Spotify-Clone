@@ -16,7 +16,7 @@ export default function HeaderBar({headBarRef}){
 
     return(
         <>
-            <div id="header-bar" className="header-bar"/>
+            <div id="header-bar" className="header-bar" ref={headBarRef}/>
             <div id="invis-header-bar" className="header-bar" ref={headBarRef}>
                 {sessionStorage.currentUser ? null : <button className="log login-head-button"><Link to="/login">Log In</Link></button>}
                 {sessionStorage.currentUser ? null : <button className="log signup-head-button"><Link to="/signup">Sign Up</Link></button>}

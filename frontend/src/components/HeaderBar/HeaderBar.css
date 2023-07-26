@@ -24,6 +24,8 @@
     /* top:0px;
     right:0px; */
     width: 80%;
+    min-width: 50%;
+    max-width: 82%;
     height: 72px;
     border: 1px yellow solid;
 
