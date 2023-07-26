@@ -10,4 +10,8 @@ ApplicationRecord.transaction do
     User.create!(username: 'Demo', password: 'password', birthday: Date.new(2001,4,5), email: "abc@gmail.com")
     puts "Creating artists"
     Artist.create!(name: "Seal")
+    Artist.create!(name: "Kendrick Lamar")
+    Artist.create!(name: "Lynyrd Skynyrd")
+    Artist.create!(name: "Hozier")
+    Artist.create!(name: "Aretha Franklin")
 end

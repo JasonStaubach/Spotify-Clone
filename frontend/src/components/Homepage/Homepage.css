@@ -36,13 +36,11 @@
     position: static;
     display: flex;
     align-items: column;
-    background-color: red;
     z-index: -3;
 }
 
 .homepage-row{
     margin-top: 100px;
-    background-color: green;
     display: static;
     height: 320px;
     min-height: 300px;
