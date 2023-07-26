@@ -1,2 +1,2 @@
 json.extract! @artist, :id, :name
-json.img_url @artist.photo.url
+json.photo @artist.photo.attached? ?  url_for(@artist.photo.url) : nil

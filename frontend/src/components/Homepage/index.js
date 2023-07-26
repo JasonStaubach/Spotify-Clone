@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 // import { Window } from "react-dom";
 import HeaderBar from "../HeaderBar";
 import SideBar from "../SideBar";
+import SongShowPage from "../SongShowPage"
 import { useDispatch, useSelector } from "react-redux";
 
 export default function HomePage(){
@@ -22,7 +23,7 @@ export default function HomePage(){
         // console.log(`x: ${e.clientX}, y: ${e.clientY}`);
         
         if (e.clientX > 0){
-            console.log(`${e.clientX} px`);
+            // console.log(`${e.clientX} px`);
             homepageRightRef.current.style.width = `${window.innerWidth - e.clientX}px`;
             headBarRef.current.style.width = `${(window.innerWidth - e.clientX) * 0.95}px`;
             invisHeadBarRef.current.style.width = `${(window.innerWidth - e.clientX) * 0.95}px`;
@@ -43,7 +44,9 @@ export default function HomePage(){
                     <div id="home-page-right" ref={homepageRightRef}>
                         <HeaderBar headBarRef={headBarRef} invisHeadBarRef={invisHeadBarRef}/>
                         <div id="homepage-display">
-                            <div className="homepage-row"></div>
+                            <div className="homepage-row">
+                                <SongShowPage/>
+                            </div>
                         </div>
                     </div>
                 </div>
