@@ -16,8 +16,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_26_134138) do
 
   create_table "artists", force: :cascade do |t|
     t.string "name", null: false
-    t.string "bio"
-    t.boolean "verified", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_artists_on_name", unique: true
