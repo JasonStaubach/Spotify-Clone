@@ -41,8 +41,8 @@
 
 .homepage-row{
     margin-top: 100px;
-    display: static;
     height: 320px;
     min-height: 300px;
     width: 100%;
+    display: flex;
 }

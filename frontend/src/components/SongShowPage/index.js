@@ -19,12 +19,22 @@ export default function SongShowPage(){
 
     return(
         <>
+            {console.log(artist)}
             <div className="song-container">
                 <div className="song-cover">
                     <img src={artist.photo}/>
                 </div>
                 <p className="song-title">Song Name</p>
                 <p className="artist-name-song">{artist.name}</p>
+            </div>
+            {console.log(artist)}
+            {console.log(artist)}
+            <div className="song-container">
+                <div className="song-cover">
+                    <img src={artist.photo}/>
+                </div>
+                <p className="song-title">Song Name</p>
+                <p className="artist-name-song">Kendrick Lamar</p>
             </div>
             {console.log(artist)}
         </>
