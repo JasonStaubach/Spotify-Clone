@@ -13,19 +13,21 @@
     /* border-style: solid; */
     color: red 5px;
     opacity: 65%;
-    z-index: -1;
+    z-index: 1;
 }
 
 #invis-header-bar{
-    z-index: 0;
+    z-index: 2;
 }
 .header-bar{
     position: fixed;
     /* top:0px;
     right:0px; */
     width: 80%;
+    min-width: 48%;
+    max-width: 80%;
     height: 72px;
-    border: 1px yellow solid;
+    /* border: 1px yellow solid; */
 
     margin: 8px;
     border-radius: 6px;

@@ -29,3 +29,20 @@
     border: 1px lightcyan solid;
     height: 100%;
 }
+
+#homepage-display{
+    height: inherit;
+    width: auto;
+    position: static;
+    display: flex;
+    align-items: column;
+    z-index: -3;
+}
+
+.homepage-row{
+    margin-top: 100px;
+    display: static;
+    height: 320px;
+    min-height: 300px;
+    width: 100%;
+}
