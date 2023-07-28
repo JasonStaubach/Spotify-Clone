@@ -31,7 +31,7 @@ require "open-uri"
     Song.first(1).each_with_index do |song, index|
         song.mp3.attach(
             io: URI.open("https://staubify-dev.s3.amazonaws.com/#{(song.name).split(" ").join("_")}.mp3"),
-            filename: "#{song.name}.mp3"
+            filename: "#{(song.name)}.mp3"
         )
     end
 # end

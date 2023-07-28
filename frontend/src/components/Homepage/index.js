@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 export default function HomePage(){
     const dispatch = useDispatch()
     
-    const [mouseCoordinates, setMouseCoordinates] = useState({x:0, y:0});
+    // const [mouseCoordinates, setMouseCoordinates] = useState({x:0, y:0});
 
     const homepageRef = useRef(null);
     const homepageRightRef = useRef(null);
@@ -45,7 +45,7 @@ export default function HomePage(){
                         <HeaderBar headBarRef={headBarRef} invisHeadBarRef={invisHeadBarRef}/>
                         <div id="homepage-display">
                             <div className="homepage-row">
-                                <SongShowPage/>
+                                <SongShowPage songId={1}/>
                             </div>
                         </div>
                     </div>
