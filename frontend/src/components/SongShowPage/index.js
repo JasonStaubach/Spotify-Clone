@@ -6,6 +6,7 @@ export default function SongShowPage(){
     const dispatch = useDispatch()
 
     const [artist, setArtist] = useState([])
+    const [artist2, setArtist2] = useState([])
 
     useEffect(() => {
         async function fetchArtist(){
@@ -16,25 +17,28 @@ export default function SongShowPage(){
         fetchArtist()
     },[])
 
+    function playSong(){
+        dispatch(setCurrentSong(song));
+      };
 
     return(
         <>
             {console.log(artist)}
-            <div className="song-container">
+            <div className="song-container" onClick={playSong( artist.)}>
                 <div className="song-cover">
                     <img src={artist.photo}/>
                 </div>
-                <p className="song-title">Song Name</p>
+                <p className="song-title">Kiss From a Rose</p>
                 <p className="artist-name-song">{artist.name}</p>
             </div>
             {console.log(artist)}
             {console.log(artist)}
             <div className="song-container">
                 <div className="song-cover">
-                    <img src={artist.photo}/>
+                    <img src={artist2.photo}/>
                 </div>
-                <p className="song-title">Song Name</p>
-                <p className="artist-name-song">Kendrick Lamar</p>
+                <p className="song-title">Money Trees</p>
+                <p className="artist-name-song">{artist2.name}</p>
             </div>
             {console.log(artist)}
         </>
