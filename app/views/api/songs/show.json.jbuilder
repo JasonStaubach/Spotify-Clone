@@ -5,6 +5,10 @@ end
 json.album do
     json.extract! @song.album, :id
 end
+json.artist do
+    json.extract! @song.artist, :id, name
+end
 
 
 json.album_cover 
+
