@@ -25,6 +25,12 @@ require "open-uri"
     end
     puts "Creating albums"
     Album.create!(name: "Kiss From a Rose(Single)", artist_id:1)
+    Album.first(1).each_with_index do |album, index|
+        album.photo.photo.attach(
+            io: URI.open("https://staubify-dev.s3.amazonaws.com/artist_#{index + 1}.jpg"),
+            filename: "#{album.name.split(" ").join("_")}.jpg"
+        )
+    end
 
     puts "Creating songs"
     Song.create!(name: "Kiss From a Rose", album_id:1)

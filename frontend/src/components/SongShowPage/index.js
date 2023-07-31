@@ -17,8 +17,8 @@ export default function SongShowPage({songId}){
     },[songId])
 
     useEffect(() => {
-        console.log(song)
-        console.log(songId)
+        console.log(song.album)
+        // console.log(songId)
     }, [song])
 
     // function playSong(){
@@ -30,7 +30,7 @@ export default function SongShowPage({songId}){
             {/* {console.log(song)} */}
             <div className="song-container" /*onClick={playSong()}*/ >
                 <div className="song-cover">
-                    <img src={song.albumId}/>
+                    <img src={song.photo}/>
                 </div>
                 <p className="song-title">{song.name}</p>
                 <p className="artist-name-song">{song.albumId}</p>
