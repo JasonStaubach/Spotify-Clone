@@ -3,7 +3,7 @@ json.song do
     json.mp3 @song.mp3.attached? ?  @song.mp3.url : nil
 end
 json.album do
-    json.extract! @song.album, :id, :
+    json.extract! @song.album, :id
 end
 
 
