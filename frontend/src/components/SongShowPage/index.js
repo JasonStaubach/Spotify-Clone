@@ -6,6 +6,8 @@ export default function SongShowPage({songId}){
     const dispatch = useDispatch()
 
     const [song, setSong] = useState([])
+    const [currSong, setCurrSong] = useState([])
+    const [playing, setPlaying] = useState(false)
 
     useEffect(() => {
         async function fetchArtist(){
@@ -22,10 +24,14 @@ export default function SongShowPage({songId}){
     }, [song])
 
     function playSong(){
-        // dispatch(currentSong(song));
-        // debugger
-        let currSong = new Audio(song.song.mp3)
-        currSong.play()
+        if(!playing){
+            let thisSong = new Audio(song.song.mp3)
+            setCurrSong(thisSong)
+            thisSong.play()
+        } else {
+            currSong.pause()
+        }
+        setPlaying(!playing)
     }
 
     return(
