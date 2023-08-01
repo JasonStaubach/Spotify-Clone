@@ -9,6 +9,12 @@ require "open-uri"
 #   Character.create(name: "Luke", movie: movies.first)
 
 # ApplicationRecord.transaction do 
+    puts 'Destroying Tables...'
+    Song.destroy_all
+    Album.destroy_all
+    Artist.destroy_all
+    User.destroy_all
+
     puts "Creating users"
     User.create!(username: 'Demo', password: 'password', birthday: Date.new(2001,4,5), email: "abc@gmail.com")
     puts "Creating artists"
@@ -31,7 +37,7 @@ require "open-uri"
     Album.create!(name: "To Pimp a Butterfly", artist_id:2)
     puts "Adding album photos"
     Album.first(1).each_with_index do |album, index|
-        album.photo.photo.attach(
+        album.photo.attach(
             io: URI.open("https://staubify-dev.s3.amazonaws.com/artist_#{index + 1}.jpg"),
             filename: "#{album.name.split(" ").join("_")}.jpg"
         )

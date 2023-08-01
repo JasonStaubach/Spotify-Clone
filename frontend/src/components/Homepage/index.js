@@ -47,6 +47,7 @@ export default function HomePage(){
                         <div id="homepage-display">
                             <div className="homepage-row">
                                 <SongShowPage songId={1}/>
+                                <SongShowPage songId={2}/>
                             </div>
                         </div>
                     </div>
