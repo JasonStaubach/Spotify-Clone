@@ -3,7 +3,6 @@
 #home-page{
     width: 100%;
     height: 100%;
-    border: 1px red solid;
     display: flex;
     flex-direction: column; 
 }
@@ -12,7 +11,9 @@
     width:95%;
     min-width: 50%;
     height: 100%;
-    border: 3px green solid;
+    margin-top: 8px;
+    border-radius: 8px;
+    background-color: rgb(23, 23, 23);
 }
 
 #fixed-page{
@@ -21,12 +22,10 @@
     position: fixed;
     display: flex;
     flex-direction: row;
-    border: 1px lightcoral solid;
 }
 
 .resizer-bar{
     width: 6px;
-    border: 1px lightcyan solid;
     height: 100%;
 }
 

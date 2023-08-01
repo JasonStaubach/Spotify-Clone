@@ -3,6 +3,7 @@
     width: 20%;
     min-width: 15%;
     display: fixed;
-    margin: 0px;
-    border: darkturquoise 1px solid;
+    margin: 8px;
+    border-radius: 8px;
+    background-color: rgb(23, 23, 23);
 }

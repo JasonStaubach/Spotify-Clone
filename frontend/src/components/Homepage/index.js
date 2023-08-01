@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import HeaderBar from "../HeaderBar";
 import SideBar from "../SideBar";
 import SongShowPage from "../SongShowPage"
+import AudioBar from "../AudioBar";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function HomePage(){
@@ -50,6 +51,7 @@ export default function HomePage(){
                         </div>
                     </div>
                 </div>
+                <AudioBar/>
             </div>
         </>
     )

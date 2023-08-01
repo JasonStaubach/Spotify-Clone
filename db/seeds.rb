@@ -17,20 +17,26 @@ require "open-uri"
     Artist.create!(name: "Lynyrd Skynyrd")
     Artist.create!(name: "Hozier")
     Artist.create!(name: "Aretha Franklin")
-    Artist.first(2).each_with_index do |artist, index|
+    Artist.first(1).each_with_index do |artist, index|
         artist.photo.attach(
-            io: URI.open("https://staubify-dev.s3.amazonaws.com/artist_#{index + 1}.jpg"),
+            # io: URI.open("https://staubify-dev.s3.amazonaws.com/artist_#{index + 1}.jpg"),
+            io: URI.open("https://staubify-dev.s3.amazonaws.com/artist_1.jpg"),
             filename: "artist_#{index + 1}.jpg"
         )
     end
+    
+        
     puts "Creating albums"
     Album.create!(name: "Kiss From a Rose(Single)", artist_id:1)
+    Album.create!(name: "To Pimp a Butterfly", artist_id:2)
+    puts "Adding album photos"
     Album.first(1).each_with_index do |album, index|
         album.photo.photo.attach(
             io: URI.open("https://staubify-dev.s3.amazonaws.com/artist_#{index + 1}.jpg"),
             filename: "#{album.name.split(" ").join("_")}.jpg"
         )
     end
+    # end
 
     puts "Creating songs"
     Song.create!(name: "Kiss From a Rose", album_id:1)
@@ -40,4 +46,3 @@ require "open-uri"
             filename: "#{(song.name)}.mp3"
         )
     end
-# end

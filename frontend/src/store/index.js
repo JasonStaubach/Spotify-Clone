@@ -9,7 +9,7 @@ import sessionReducer from './session';
 export const rootReducer = combineReducers({
     // artists: artistsReducer,
     session: sessionReducer,
-    // songs: songsReducer,
+    songs: songsReducer,
     users: usersReducer
 
 });
