@@ -10,20 +10,21 @@ export default function SongShowPage({songId}){
     const [playing, setPlaying] = useState(false)
 
     useEffect(() => {
-        async function fetchArtist(){
+        async function fetchSong(){
             const res = await fetch(`/api/songs/${songId}`)
             setSong ( await res.json())
             // console.log(res)
         }
-        dispatch(fetchArtist)
+        fetchSong()
     },[songId])
 
     useEffect(() => {
-        console.log(song)
+        // console.log(song)
         // console.log(songId)
     }, [song])
 
     function playSong(){
+        console.log(song)
         if(!playing){
             let thisSong = new Audio(song.song.mp3)
             setCurrSong(thisSong)
@@ -36,7 +37,7 @@ export default function SongShowPage({songId}){
 
     return(
         <>
-            {console.log(song.album)}
+            {/* {console.log(song.album)} */}
             <div className="song-container" onClick={playSong}>
                 <div className="song-cover">
                     <img src={song.album ? song.album.photo : null} alt="album-img"/>

@@ -50,7 +50,7 @@ require "open-uri"
     Song.create!(name: "King Kunta", album_id:2)
     Song.create!(name: "The Blacker the Berry", album_id: 2)
     Song.create!(name: "Free Bird", album_id: 3)
-    Song.first(1).each_with_index do |song, index|
+    Song.first(2).each_with_index do |song, index|
         song.mp3.attach(
             io: URI.open("https://staubify-dev.s3.amazonaws.com/#{(song.name).split(" ").join("_")}.mp3"),
             filename: "#{(song.name)}.mp3"
