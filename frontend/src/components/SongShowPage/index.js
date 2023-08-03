@@ -25,7 +25,8 @@ export default function SongShowPage({songId}){
     }, [song])
 
     function playSong(){
-        console.log(song.song)
+        let currSong = new Audio(song.song.mp3)
+        console.log(currSong.duration)
         console.log(sessionStorage)
         // let currSong = new Audio(song.song.mp3)
         // currSong.play()

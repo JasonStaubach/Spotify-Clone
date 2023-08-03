@@ -16,22 +16,28 @@ export default function AudioBar(){
 
     //set current song
     useEffect(() => {
-        dispatch(fetchCurrentSong(sessionStorage.songId))
-        setCurrentTrack(sessionStorage.songId)
+        setCurrentTrack(dispatch(fetchCurrentSong(sessionStorage.songId)))
+        // setCurrentTrack(sessionStorage.songId)
 
     },[sessionStorage.songId])
 
 
-    function playSong(){
-        currentTrack.play()
-    }
+    useEffect(() => {
+        let currSong = new Audio(currentTrack.mp3)
+        if(isPlaying){
+            console.log(currentTrack.duration)
+            currSong.play()
+        } else {
+            currSong.pause()
+        }
+    },[isPlaying])
     
 
 
     return (
         <div className="audio-bar-outer">
             <div>
-            <audio src={"idk yet"} id="audioPlayer" ref={audioPlayer}></audio>
+            <audio src={currentTrack} id="audioPlayer" ref={audioPlayer}></audio>
 
             <div className="current-track-info">
                 {"Track Info"}
