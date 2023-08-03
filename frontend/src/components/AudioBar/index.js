@@ -12,6 +12,8 @@ export default function AudioBar(){
     const volumeSlider = useRef();
 
 
+    
+
 
     return (
         <div className="audio-bar-outer">

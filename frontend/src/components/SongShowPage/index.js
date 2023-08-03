@@ -1,19 +1,20 @@
 import { useEffect } from "react";
 import { useDispatch} from "react-redux";
 import { useState } from "react";
+import AudioBar from "../AudioBar";
 
 export default function SongShowPage({songId}){
     const dispatch = useDispatch()
 
     const [song, setSong] = useState([])
-    const [currSong, setCurrSong] = useState([])
+    // const [currSong, setCurrSong] = useState([])
     const [playing, setPlaying] = useState(false)
 
     useEffect(() => {
         async function fetchSong(){
             const res = await fetch(`/api/songs/${songId}`)
             setSong ( await res.json())
-            // console.log(res)
+            console.log(res)
         }
         fetchSong()
     },[songId])
@@ -24,15 +25,7 @@ export default function SongShowPage({songId}){
     }, [song])
 
     function playSong(){
-        console.log(song)
-        if(!playing){
-            let thisSong = new Audio(song.song.mp3)
-            setCurrSong(thisSong)
-            thisSong.play()
-        } else {
-            currSong.pause()
-        }
-        setPlaying(!playing)
+        AudioBar.setCurrentTrack(song.song)
     }
 
     return(
