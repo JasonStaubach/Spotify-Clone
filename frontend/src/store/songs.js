@@ -1,3 +1,6 @@
+import React from "react";
+import { csrfFetch } from "./csrf";
+
 const SET_CURRENT_SONG = 'SET_CURRENT_SONG';
 
 
@@ -6,6 +9,12 @@ export function setCurrentSong(song){
         type: 'SET_CURRENT_SONG',
         data: song
       }
+}
+
+export const fetchCurrentSong = (songId) => async dispatch =>{
+    const res = await csrfFetch(`api/songs/${songId}`)
+    const data = await res.json();
+    dispatch(setCurrentSong(data))
 }
 
 

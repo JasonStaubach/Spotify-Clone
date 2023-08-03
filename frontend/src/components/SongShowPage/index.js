@@ -26,10 +26,10 @@ export default function SongShowPage({songId}){
 
     function playSong(){
         console.log(song.song)
-        console.log(sessionStorage.song.name)
-        let currSong = new Audio(song.song.mp3)
-        currSong.play()
-        sessionStorage.song = song.song
+        console.log(sessionStorage)
+        // let currSong = new Audio(song.song.mp3)
+        // currSong.play()
+        sessionStorage.setItem('songId',song.song.id)
     }
 
     return(

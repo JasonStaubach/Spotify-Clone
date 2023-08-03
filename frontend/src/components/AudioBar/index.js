@@ -1,8 +1,11 @@
 import React from "react";
 import {useState, useEffect, useRef} from "react";
+import { fetchCurrentSong } from "../../store/songs";
+import { useDispatch } from "react-redux";
 
 
 export default function AudioBar(){
+    const dispatch = useDispatch();
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentTrack, setCurrentTrack] = useState(-1);
     const [volume, setVolume] = useState(0.5)
@@ -11,7 +14,17 @@ export default function AudioBar(){
     const audioPlayer = useRef();
     const volumeSlider = useRef();
 
+    //set current song
+    useEffect(() => {
+        dispatch(fetchCurrentSong(sessionStorage.songId))
+        setCurrentTrack(sessionStorage.songId)
 
+    },[sessionStorage.songId])
+
+
+    function playSong(){
+        currentTrack.play()
+    }
     
 
 
