@@ -14,7 +14,7 @@ export default function SongShowPage({songId}){
         async function fetchSong(){
             const res = await fetch(`/api/songs/${songId}`)
             setSong ( await res.json())
-            console.log(res)
+            // console.log(res)
         }
         fetchSong()
     },[songId])
