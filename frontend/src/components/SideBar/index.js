@@ -10,7 +10,12 @@ export default function SideBar({sideBarRef}){
 
     return(
         <div id="side-bar" ref={sideBarRef}>
-            
+            <label>Home
+                <Link to="/"/>
+            </label>
+            <label>Search
+                <input type="text"></input>
+            </label>
         </div>
     )
 
