@@ -25,7 +25,11 @@ export default function SongShowPage({songId}){
     }, [song])
 
     function playSong(){
-        AudioBar.setCurrentTrack(song.song)
+        console.log(song.song)
+        console.log(sessionStorage.song.name)
+        let currSong = new Audio(song.song.mp3)
+        currSong.play()
+        sessionStorage.song = song.song
     }
 
     return(

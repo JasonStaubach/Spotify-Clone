@@ -3,6 +3,7 @@ import * as sessionFunctions from '../../store/session'
 import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 import { Link } from 'react-router-dom'
 import { useHistory } from "react-router-dom";
+import SearchBar from "./searchbar";
 
 export default function SideBar({sideBarRef}){
     const dispatch = useDispatch()
@@ -14,8 +15,9 @@ export default function SideBar({sideBarRef}){
                 <label>Home
                     <Link to="/"/>
                 </label>
-                <label>Search
-                    <input type="text"></input>
+                <label>
+                    {/* <input type="text"></input> */}
+                    <SearchBar />
                 </label>
             </div>
             <div id="side-bar-bot">

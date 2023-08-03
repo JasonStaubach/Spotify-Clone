@@ -15,6 +15,15 @@
     flex-direction: column;
 }
 
+#side-bar-bot{
+    margin: 8px;
+    margin-top: 0px;
+    border-radius: 8px;
+    background-color: rgb(23, 23, 23);
+    flex-direction: column;
+    height: 100%;
+}
+
 #side-bar-top label{
     font-size: x-large;
     margin: 20px;
@@ -28,4 +37,27 @@
     border-radius: 7px;
     height: 20px;
     width: 50%;
+    color: white;
+}
+
+.searchbar-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+#search-input #search-input:focus{
+    border: 0;
+    outline: none;
+}
+
+#search-dropdown{
+    position: absolute;
+}
+
+#search-dropdown-value{
+    border: 1px white;
+    padding: 5px;
+    cursor: pointer;
 }

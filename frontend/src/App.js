@@ -4,6 +4,7 @@ import LoginFormPage from './components/LoginFormPage';
 import HeaderBar from './components/HeaderBar';
 import SignupFormPage from './components/SignupFormPage';
 import Homepage from "./components/Homepage";
+import SearchShowPage from './components/SearchShowPage';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route path="/signup">
           <SignupFormPage />
+        </Route>
+        <Route path="/search">
+          <SearchShowPage/>
         </Route>
         <Route path="/">
           <Homepage/>
