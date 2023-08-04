@@ -4,13 +4,17 @@
 @import 'components/SignupFormPage/SignupFormPage.css';
 @import 'components/LoginFormPage/LoginFormPage.css';
 @import './fonts/fonts.css';
+@import 'components/SideBar/SideBar.css';
+@import 'components/Homepage/Homepage.css';
+@import 'components/SongShowPage/SongShowPage.css';
+@import 'components/AudioBar/AudioBar.css';
 
 
 body{
     background-color: rgb(37, 36, 36);
     color: black;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vw;
     margin: 0px;
 }
  @media screen and (url-match(location, "/signup")) {
@@ -33,11 +37,11 @@ h1, h2, h4, input, label, button, select, option, p, a {
   font-family: CircularSpotifyMedium;
 }
 div{
-  margin-top: 5px;
+  margin: 0px;
   font-family: CircularSpotifyLight;
   font-size: 16px;
 }
-.root{
+#root{
     width: 100%;
     height: 100%;
 }

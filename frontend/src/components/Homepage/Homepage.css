@@ -1,6 +1,47 @@
 
 
 #home-page{
-    width: 70%;
+    width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column; 
+}
+
+#home-page-right{
+    width:95%;
+    min-width: 50%;
+    height: 100%;
+    margin-top: 8px;
+    border-radius: 8px;
+    background-color: rgb(23, 23, 23);
+}
+
+#fixed-page{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+}
+
+.resizer-bar{
+    width: 6px;
+    height: 100%;
+}
+
+#homepage-display{
+    height: inherit;
+    width: auto;
+    position: static;
+    display: flex;
+    align-items: column;
+    z-index: -3;
+}
+
+.homepage-row{
+    margin-top: 100px;
+    height: 320px;
+    min-height: 300px;
+    width: 100%;
+    display: flex;
 }
