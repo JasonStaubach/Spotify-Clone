@@ -45,16 +45,29 @@ export default function HomePage(){
                     <div id="home-page-right" ref={homepageRightRef}>
                         <HeaderBar headBarRef={headBarRef} invisHeadBarRef={invisHeadBarRef}/>
                         <div id="homepage-display">
+                            <div id="inner-homepage-display">
+                            <p className="row-title" value="Recommended For You">Recommended For You</p>
                             <div className="homepage-row">
                                 <SongShowPage songId={1}/>
                                 <SongShowPage songId={2}/>
                                 <SongShowPage songId={3}/>
                                 <SongShowPage songId={4}/>
+                                <SongShowPage songId={5}/>
+                            </div>
+                            <p className="row-title" id="row-2-title"> Demo Album: Rihanna</p>
+                            <div className="homepage-row" >
+                                <SongShowPage songId={6}/>
+                                <SongShowPage songId={7}/>
+                                <SongShowPage songId={8}/>
+                                <SongShowPage songId={9}/>
+                                <SongShowPage songId={10}/>
+                            </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <AudioBar/>
+                {sessionStorage.songId === "1" ? console.log("hi") : null}
+                {sessionStorage.songId === `1` && <AudioBar/>}
             </div>
         </>
     )

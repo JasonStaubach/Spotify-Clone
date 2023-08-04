@@ -26,13 +26,18 @@ export default function SongShowPage({songId}){
 
     function playSong(){
         let currSong = new Audio(song.song.mp3)
-        console.log(currSong.duration)
+        console.log(song.song.id)
         console.log(sessionStorage)
-        // let currSong = new Audio(song.song.mp3)
-        // currSong.play()
+        setPlaying(!playing)
+        if(playing){
+            currSong.play()
+        } else {
+            currSong.pause()
+        }
+
         sessionStorage.setItem('songId',song.song.id)
     }
-
+ 
     return(
         <>
             {/* {console.log(song.album)} */}

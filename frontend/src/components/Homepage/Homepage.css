@@ -31,17 +31,31 @@
 
 #homepage-display{
     height: inherit;
-    width: auto;
+    width: 100%;
     position: static;
-    display: flex;
+    /* display: fx; */
     align-items: column;
     z-index: -3;
 }
-
+#inner-homepage-display{
+    height: inherit;
+    width: inherit;
+    position: relative;
+}
 .homepage-row{
-    margin-top: 100px;
+    margin-top: 0px;
     height: 320px;
     min-height: 300px;
     width: 100%;
     display: flex;
+}
+
+.row-title{
+    margin-top: 80px;
+    font-size: XX-large;
+    color: white;
+}
+
+#row-2-title{
+    margin-top: 20px;
 }
