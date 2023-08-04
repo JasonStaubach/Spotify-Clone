@@ -54,7 +54,7 @@ export default function HomePage(){
                         </div>
                     </div>
                 </div>
-                <AudioBar/>
+                {sessionStorage.songId === `1` && <AudioBar/>}
             </div>
         </>
     )

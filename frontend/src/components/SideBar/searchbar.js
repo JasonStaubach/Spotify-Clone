@@ -32,10 +32,25 @@ export default function SearchBar(){
         }
     }
 
-    function handleSubmit(e){
+    function handleSubmit(e) {
         e.preventDefault()
-        if(searchText.trim() !== 0){}
+        if(searchText?.trim() !== ""){
+            history.push(`/search?query=${searchText}`)
+        }
     }
+
+    function handleSearch(e) {
+        const query = e.target.value
+        setSearchText(query)
+        clearTimeout(timer)
+
+        if(query.trim() !== ""){
+            setTimer(setTimeout(()=> dispatch(fetchSearchResults(query)),300))
+        } else {
+            dispatch(clearSearchResults)
+        }
+    }
+    
     return (
         <div className="searchbar-container">
             <input
