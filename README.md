@@ -37,6 +37,8 @@ This playbar will follow along with the music, you can pause/play, change the vo
 these jbuilders attach music and pictures to the songs, and then searth through them by name dynamically.
 
 <img src="https://github.com/JasonStaubach/Spotify-Clone/assets/33754025/d6d4b489-1335-4e4f-b7b5-40fd54fa205c" width="500" height="200" />
+
+
 <img src="https://github.com/JasonStaubach/Spotify-Clone/assets/33754025/588b3fb8-68e3-453d-8a9c-d358266f67f2" width="500" height="250" />
 
 
