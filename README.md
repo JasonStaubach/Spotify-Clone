@@ -24,8 +24,19 @@ Users can login/logout, redirect to playlists or homepage. They can use the sear
 ![Screenshot 2023-08-04 145444](https://github.com/JasonStaubach/Spotify-Clone/assets/33754025/c2b16df6-eab0-4f45-b59c-e8a4cbd0f8a3)
 
 ## Song and Album Display Page
-<img src="https://github.com/JasonStaubach/Spotify-Clone/assets/33754025/bea84626-aa07-4ad0-bd22-9702890e3350" width="600 height="600" />
+There will be different rows in Staubify showing songs or albums in order. Clicking on the forms will play and pause the music.
+<img src="https://github.com/JasonStaubach/Spotify-Clone/assets/33754025/bea84626-aa07-4ad0-bd22-9702890e3350" width="600" height="600" />
+
+## Playbar
+This playbar will follow along with the music, you can pause/play, change the volume, and use the audio slider to change where in the song you are.
 
 
+# Code Snippet
+
+## Songs Jbuilder
+these jbuilders attach music and pictures to the songs, and then searth through them by name dynamically.
+
+<img src="https://github.com/JasonStaubach/Spotify-Clone/assets/33754025/d6d4b489-1335-4e4f-b7b5-40fd54fa205c" width="500" height="200" />
+<img src="https://github.com/JasonStaubach/Spotify-Clone/assets/33754025/588b3fb8-68e3-453d-8a9c-d358266f67f2" width="500" height="250" />
 
 
