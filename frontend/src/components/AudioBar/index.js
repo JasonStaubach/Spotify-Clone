@@ -16,14 +16,15 @@ export default function AudioBar(){
 
     //set current song
     useEffect(() => {
-        dispatch(fetchCurrentSong(sessionStorage.songId)).then(setCurrentTrack())
+        dispatch(fetchCurrentSong(sessionStorage.songId)).then((currentTrackData) => {  })
         // setCurrentTrack(sessionStorage.songId)
 
     },[sessionStorage.songId])
 
 
     useEffect(() => {
-        let currSong = new Audio(currentTrack.mp3)
+        console.log(currentTrack)
+        let currSong = new Audio()
         if(isPlaying){
             console.log(currentTrack.duration)
             currSong.play()
@@ -44,7 +45,7 @@ export default function AudioBar(){
             </div>
             
             </div>
-                <div>{`${currentTrack}`}</div>
+                {/* <div>{`${currentTrack}`}</div> */}
             <div className="bar-controls">
                 <div className="control-top">
 

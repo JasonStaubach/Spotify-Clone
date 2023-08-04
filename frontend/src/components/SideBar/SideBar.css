@@ -57,7 +57,25 @@
 }
 
 #search-dropdown-value{
+    position: relative;
     border: 1px white;
     padding: 5px;
     cursor: pointer;
+    background-color: black;
+}
+
+#search-button{
+   padding: 2px;
+   background-color: white;
+}
+
+#side-bar-bot div{
+    font-size: x-large;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+
+#playlist-button{
+    background-color: white;
 }

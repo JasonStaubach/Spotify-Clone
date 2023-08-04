@@ -50,18 +50,18 @@ export default function SearchBar(){
             dispatch(clearSearchResults)
         }
     }
-    
+
     return (
         <div className="searchbar-container">
             <input
                 type="text"
                 id="search-input"
-                placeholder="What do you want to listen to?"
+                placeholder="Search"
                 value={searchText}
                 onChange={handleSearch}
             />
 
-            <button id="search-button"></button>
+            <button id="search-button">🔍</button>
 
             {searchText && searchResults && <ul id="search-dropdown">
                 {searchResults.map(result => {

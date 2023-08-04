@@ -21,7 +21,9 @@ export default function SideBar({sideBarRef}){
                 </label>
             </div>
             <div id="side-bar-bot">
-                
+                <div id="library">Your Library</div>
+                <div id="playlist-creator">Playlist Creator</div>
+                <button id="playlist-button">Make your first playlist!</button>
             </div>
         </div>
     )
